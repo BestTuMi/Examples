@@ -679,14 +679,13 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="touchPlayButton:" target="Ywn-j2-EXM" id="Tdf-a5-zG1"/>
+                                    <action selector="touchPlayButton:" target="XfG-lQ-9wD" id="qZH-0a-Pdi"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Ywn-j2-EXM" customClass="AudioFileConductor"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>

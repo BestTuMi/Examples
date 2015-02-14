@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C44B4E521A8F210300A045E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B4E501A8F210300A045E0 /* ViewController.m */; };
 		E4670BDA1A8EE96000B4235E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4670BD91A8EE96000B4235E /* AppDelegate.m */; };
 		E4670BDC1A8EE96000B4235E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4670BDB1A8EE96000B4235E /* main.m */; };
 		E4670BE11A8EE96000B4235E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4670BE01A8EE96000B4235E /* Images.xcassets */; };
 		E4670BE41A8EE96000B4235E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4670BE21A8EE96000B4235E /* Main.storyboard */; };
-		E4670BFB1A8EE98000B4235E /* AudioFileConductor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4670BFA1A8EE98000B4235E /* AudioFileConductor.m */; };
 		E4670BFE1A8EE98E00B4235E /* AudioFilePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4670BFD1A8EE98E00B4235E /* AudioFilePlayer.m */; };
 		EB4969EEF08451396C5A3345 /* libPods-PlayAudioFile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B483A497D55BC97F35812C /* libPods-PlayAudioFile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F640B9108F146F605E8125B /* Pods-PlayAudioFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayAudioFile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayAudioFile/Pods-PlayAudioFile.debug.xcconfig"; sourceTree = "<group>"; };
+		C44B4E4F1A8F210300A045E0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C44B4E501A8F210300A045E0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C8776071BA55DA749CDD07AF /* Pods-PlayAudioFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayAudioFile.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayAudioFile/Pods-PlayAudioFile.release.xcconfig"; sourceTree = "<group>"; };
 		D0B483A497D55BC97F35812C /* libPods-PlayAudioFile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayAudioFile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4670BD31A8EE96000B4235E /* PlayAudioFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAudioFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,8 +29,6 @@
 		E4670BDB1A8EE96000B4235E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4670BE01A8EE96000B4235E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4670BE31A8EE96000B4235E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E4670BF91A8EE98000B4235E /* AudioFileConductor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileConductor.h; sourceTree = "<group>"; };
-		E4670BFA1A8EE98000B4235E /* AudioFileConductor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileConductor.m; sourceTree = "<group>"; };
 		E4670BFC1A8EE98E00B4235E /* AudioFilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFilePlayer.h; sourceTree = "<group>"; };
 		E4670BFD1A8EE98E00B4235E /* AudioFilePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFilePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,11 +83,10 @@
 		E4670BD51A8EE96000B4235E /* PlayAudioFile */ = {
 			isa = PBXGroup;
 			children = (
-				E4670BF91A8EE98000B4235E /* AudioFileConductor.h */,
-				E4670BFA1A8EE98000B4235E /* AudioFileConductor.m */,
+				C44B4E4F1A8F210300A045E0 /* ViewController.h */,
+				C44B4E501A8F210300A045E0 /* ViewController.m */,
 				E4670BFC1A8EE98E00B4235E /* AudioFilePlayer.h */,
 				E4670BFD1A8EE98E00B4235E /* AudioFilePlayer.m */,
-				E4670BE01A8EE96000B4235E /* Images.xcassets */,
 				E4670BE21A8EE96000B4235E /* Main.storyboard */,
 				E4670BD61A8EE96000B4235E /* Supporting Files */,
 			);
@@ -97,6 +96,7 @@
 		E4670BD61A8EE96000B4235E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4670BE01A8EE96000B4235E /* Images.xcassets */,
 				E4670BD81A8EE96000B4235E /* AppDelegate.h */,
 				E4670BD91A8EE96000B4235E /* AppDelegate.m */,
 				E4670BD71A8EE96000B4235E /* Info.plist */,
@@ -210,9 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4670BDC1A8EE96000B4235E /* main.m in Sources */,
-				E4670BFB1A8EE98000B4235E /* AudioFileConductor.m in Sources */,
 				E4670BDA1A8EE96000B4235E /* AppDelegate.m in Sources */,
 				E4670BFE1A8EE98E00B4235E /* AudioFilePlayer.m in Sources */,
+				C44B4E521A8F210300A045E0 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
