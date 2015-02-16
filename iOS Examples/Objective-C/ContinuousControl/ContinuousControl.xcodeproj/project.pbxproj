@@ -562,7 +562,7 @@
 				C4AC58161A91D57800B2F63B /* Utilities */,
 			);
 			name = "AudioKit V1.3";
-			path = "../../../AudioKit V1.3";
+			path = "$(SRCROOT)/../../../AudioKit V1.3";
 			sourceTree = "<group>";
 		};
 		C4AC56B91A91D57800B2F63B /* Core Classes */ = {

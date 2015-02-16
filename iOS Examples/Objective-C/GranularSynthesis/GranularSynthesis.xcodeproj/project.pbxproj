@@ -1108,7 +1108,7 @@
 				C4AC5BF51A91DCB900B2F63B /* Utilities */,
 			);
 			name = "AudioKit V1.3";
-			path = "/Users/aure/Developer/AKExamples/iOS Examples/Objective-C/ContinuousControl/../../../AudioKit V1.3";
+			path = "$(SRCROOT)/../../../AudioKit V1.3";
 			sourceTree = "<absolute>";
 		};
 		E481E8A019DF54F8004BDD9E = {

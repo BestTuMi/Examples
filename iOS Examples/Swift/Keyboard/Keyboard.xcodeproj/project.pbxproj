@@ -1169,7 +1169,7 @@
 				C4AC6FF91A91ECCB00B2F63B /* Utilities */,
 			);
 			name = "AudioKit V1.3";
-			path = "/Users/aure/Developer/AKExamples/iOS Examples/Swift/Convolution/../../../AudioKit V1.3";
+			path = "$(SRCROOT)/../../../AudioKit V1.3";
 			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */

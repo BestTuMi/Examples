@@ -1084,7 +1084,7 @@
 				C4AC7A481A91F91000B2F63B /* Utilities */,
 			);
 			name = "AudioKit V1.3";
-			path = "/Users/aure/Developer/AKExamples/OSX Examples/Objective-C/ContinuousControl/../../../AudioKit V1.3";
+			path = "$(SRCROOT)/../../../AudioKit V1.3";
 			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
