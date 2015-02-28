@@ -494,7 +494,7 @@
 		C4AC708B1A91ED5200B2F63B = {
 			isa = PBXGroup;
 			children = (
-				C4AC721A1A91EDA000B2F63B /* AudioKit V1.3 */,
+				C4AC721A1A91EDA000B2F63B /* AudioKitV1.3 */,
 				C4AC70961A91ED5200B2F63B /* Harmonizer */,
 				C4AC70951A91ED5200B2F63B /* Products */,
 			);
@@ -1145,7 +1145,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		C4AC721A1A91EDA000B2F63B /* AudioKit V1.3 */ = {
+		C4AC721A1A91EDA000B2F63B /* AudioKitV1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				C4AC70D51A91EDA000B2F63B /* Core Classes */,
@@ -1154,8 +1154,8 @@
 				C4AC72141A91EDA000B2F63B /* Parameters */,
 				C4AC72191A91EDA000B2F63B /* Utilities */,
 			);
-			name = "AudioKit V1.3";
-			path = "$(SRCROOT)/../../../AudioKit V1.3";
+			name = "AudioKitV1.3";
+			path = "$(SRCROOT)/../../../AudioKitV1.3";
 			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
@@ -1485,7 +1485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Harmonizer/Bridging-Header.h";
@@ -1500,7 +1500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Harmonizer/Bridging-Header.h";

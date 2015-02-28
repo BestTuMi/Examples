@@ -502,7 +502,7 @@
 		C4398C7219628CBC0076F005 = {
 			isa = PBXGroup;
 			children = (
-				E48796E11AA259B000DED00A /* AudioKit V1.3 */,
+				E48796E11AA259B000DED00A /* AudioKitV1.3 */,
 				C4398C8419628CBC0076F005 /* Convolution */,
 				C4398C7C19628CBC0076F005 /* Products */,
 			);
@@ -561,7 +561,7 @@
 			path = Instruments;
 			sourceTree = "<group>";
 		};
-		E48796E11AA259B000DED00A /* AudioKit V1.3 */ = {
+		E48796E11AA259B000DED00A /* AudioKitV1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				E48796E21AA259B000DED00A /* Core Classes */,
@@ -570,8 +570,8 @@
 				E487982B1AA259B100DED00A /* Parameters */,
 				E487983F1AA259B100DED00A /* Utilities */,
 			);
-			name = "AudioKit V1.3";
-			path = "../../../AudioKit V1.3";
+			name = "AudioKitV1.3";
+			path = "../../../AudioKitV1.3";
 			sourceTree = "<group>";
 		};
 		E48796E21AA259B000DED00A /* Core Classes */ = {
@@ -1501,7 +1501,7 @@
 				GCC_PREFIX_HEADER = "Convolution/Convolution-Prefix.pch";
 				INFOPLIST_FILE = "Convolution/Convolution-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1518,7 +1518,7 @@
 				GCC_PREFIX_HEADER = "Convolution/Convolution-Prefix.pch";
 				INFOPLIST_FILE = "Convolution/Convolution-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

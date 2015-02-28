@@ -505,7 +505,7 @@
 		C4397E2619626F300076F005 = {
 			isa = PBXGroup;
 			children = (
-				E4879EB91AA25AC600DED00A /* AudioKit V1.3 */,
+				E4879EB91AA25AC600DED00A /* AudioKitV1.3 */,
 				C4397E3819626F300076F005 /* PlayAudioFile */,
 				C4397E3019626F300076F005 /* Products */,
 			);
@@ -566,7 +566,7 @@
 			path = Instruments;
 			sourceTree = "<group>";
 		};
-		E4879EB91AA25AC600DED00A /* AudioKit V1.3 */ = {
+		E4879EB91AA25AC600DED00A /* AudioKitV1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				E4879EBA1AA25AC600DED00A /* Core Classes */,
@@ -575,8 +575,8 @@
 				E487A0031AA25AC600DED00A /* Parameters */,
 				E487A0171AA25AC600DED00A /* Utilities */,
 			);
-			name = "AudioKit V1.3";
-			path = "../../../AudioKit V1.3";
+			name = "AudioKitV1.3";
+			path = "../../../AudioKitV1.3";
 			sourceTree = "<group>";
 		};
 		E4879EBA1AA25AC600DED00A /* Core Classes */ = {
@@ -1508,7 +1508,7 @@
 				INFOPLIST_FILE = "PlayAudioFile/PlayAudioFile-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1526,7 +1526,7 @@
 				INFOPLIST_FILE = "PlayAudioFile/PlayAudioFile-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

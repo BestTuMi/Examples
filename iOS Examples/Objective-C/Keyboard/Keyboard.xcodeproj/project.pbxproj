@@ -503,7 +503,7 @@
 		C49E7B051A043FD700BA5791 = {
 			isa = PBXGroup;
 			children = (
-				E4879CC31AA25A8600DED00A /* AudioKit V1.3 */,
+				E4879CC31AA25A8600DED00A /* AudioKitV1.3 */,
 				C49E7B101A043FD700BA5791 /* Keyboard */,
 				C49E7B0F1A043FD700BA5791 /* Products */,
 			);
@@ -555,7 +555,7 @@
 			path = Instruments;
 			sourceTree = "<group>";
 		};
-		E4879CC31AA25A8600DED00A /* AudioKit V1.3 */ = {
+		E4879CC31AA25A8600DED00A /* AudioKitV1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				E4879CC41AA25A8600DED00A /* Core Classes */,
@@ -564,8 +564,8 @@
 				E4879E0D1AA25A8600DED00A /* Parameters */,
 				E4879E211AA25A8600DED00A /* Utilities */,
 			);
-			name = "AudioKit V1.3";
-			path = "../../../AudioKit V1.3";
+			name = "AudioKitV1.3";
+			path = "../../../AudioKitV1.3";
 			sourceTree = "<group>";
 		};
 		E4879CC41AA25A8600DED00A /* Core Classes */ = {
@@ -1507,7 +1507,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1527,7 +1527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

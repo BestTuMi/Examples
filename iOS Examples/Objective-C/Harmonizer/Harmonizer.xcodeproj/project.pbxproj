@@ -498,7 +498,7 @@
 		C407D54B1969D75D00322F25 = {
 			isa = PBXGroup;
 			children = (
-				E4879ACD1AA25A4B00DED00A /* AudioKit V1.3 */,
+				E4879ACD1AA25A4B00DED00A /* AudioKitV1.3 */,
 				C407D55D1969D75D00322F25 /* Harmonizer */,
 				C407D5551969D75D00322F25 /* Products */,
 			);
@@ -539,7 +539,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E4879ACD1AA25A4B00DED00A /* AudioKit V1.3 */ = {
+		E4879ACD1AA25A4B00DED00A /* AudioKitV1.3 */ = {
 			isa = PBXGroup;
 			children = (
 				E4879ACE1AA25A4B00DED00A /* Core Classes */,
@@ -548,8 +548,8 @@
 				E4879C171AA25A4B00DED00A /* Parameters */,
 				E4879C2B1AA25A4B00DED00A /* Utilities */,
 			);
-			name = "AudioKit V1.3";
-			path = "../../../AudioKit V1.3";
+			name = "AudioKitV1.3";
+			path = "../../../AudioKitV1.3";
 			sourceTree = "<group>";
 		};
 		E4879ACE1AA25A4B00DED00A /* Core Classes */ = {
@@ -1478,7 +1478,7 @@
 				INFOPLIST_FILE = "Harmonizer/Harmonizer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1497,7 +1497,7 @@
 				INFOPLIST_FILE = "Harmonizer/Harmonizer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKit V1.3/Libraries/iOS/csound-iOS/libs\"",
+					"\"$(SRCROOT)/../../../AudioKitV1.3/Libraries/iOS/csound-iOS/libs\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
