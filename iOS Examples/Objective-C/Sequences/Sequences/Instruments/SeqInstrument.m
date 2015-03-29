@@ -15,13 +15,11 @@
     if (self) {
         // NOTE BASED CONTROL ==================================================
         SeqInstrumentNote *note = [[SeqInstrumentNote alloc] init];
-        [self addNoteProperty:note.frequency];
         
         // INSTRUMENT CONTROL ==================================================
         _modulation  = [[AKInstrumentProperty alloc] initWithValue:1.0
                                                            minimum:0.5
                                                            maximum:2.0];
-        [self addProperty:_modulation];
         
         // INSTRUMENT DEFINITION ===============================================        
         AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
@@ -30,11 +28,9 @@
         fmOscillator.modulatingMultiplier = _modulation;
         fmOscillator.modulationIndex.value = 15;
         fmOscillator.amplitude.value = 0.2;
-        [self connect:fmOscillator];
         
         // AUDIO OUTPUT ========================================================
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
-        [self connect:audio];
+        [self setAudioOutput:fmOscillator];
     }
     return self;
 }
