@@ -33,10 +33,6 @@
                                                           minimum:0.0
                                                           maximum:25];
         
-        [self addProperty:_amplitude];
-        [self addProperty:_frequency];
-        [self addProperty:_modulation];
-        [self addProperty:_modIndex];
         
         // INSTRUMENT DEFINITION ===============================================        
         AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
@@ -45,12 +41,9 @@
         fmOscillator.modulationIndex = _modIndex;
         fmOscillator.amplitude = _amplitude;
         
-        [self connect:fmOscillator];
         
         // AUDIO OUTPUT ========================================================
-        
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
-        [self connect:audio];
+        [self setAudioOutput:fmOscillator];
         
     }
     
