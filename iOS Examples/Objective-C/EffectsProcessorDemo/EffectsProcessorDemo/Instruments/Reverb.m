@@ -18,30 +18,25 @@
         _reverbFeedback = [[AKInstrumentProperty alloc] initWithValue:0.5
                                                               minimum:0
                                                               maximum:1.0];
-        [self addProperty:_reverbFeedback];
         
         _mix = [[AKInstrumentProperty alloc] initWithValue:0
                                                    minimum:0
                                                    maximum:1.0];
-        [self addProperty:_mix];
         
         
         AKReverb *reverb;
         reverb = [[AKReverb alloc] initWithStereoInput:audioSource];
         reverb.feedback = _reverbFeedback;
-        [self connect:reverb];
         
         AKMix *leftMix;
         leftMix = [[AKMix alloc] initWithInput1:audioSource.leftOutput
                                          input2:reverb.leftOutput
                                         balance:_mix];
-        [self connect:leftMix];
         
         AKMix *rightMix;
         rightMix = [[AKMix alloc] initWithInput1:audioSource.rightOutput
                                           input2:reverb.rightOutput
                                          balance:_mix];
-        [self connect:rightMix];
         
         // AUDIO OUTPUT ========================================================
         
@@ -49,7 +44,6 @@
         //audio = [[AKAudioOutput alloc] initWithStereoAudioSource:audioSource];
         audio = [[AKAudioOutput alloc] initWithLeftAudio:leftMix
                                               rightAudio:rightMix];
-        [self connect:audio];
         
         // Reset Inputs
         [self resetParameter:audioSource];

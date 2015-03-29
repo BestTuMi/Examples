@@ -23,14 +23,11 @@
     if (self) {
         
         Playback *note = [[Playback alloc] init];
-        [self addNoteProperty:note.startTime];
         
         _filePosition = [[AKInstrumentProperty alloc] initWithValue:0];
-        [self addProperty:_filePosition];
         
         AKFileInput *fileIn = [[AKFileInput alloc] initWithFilename:filename];
         fileIn.startTime = note.startTime;
-        [self connect:fileIn];
         
         // Output to global effects processing
         _auxilliaryOutput = [AKStereoAudio globalParameter];
@@ -51,7 +48,6 @@
         _startTime = [[AKNoteProperty alloc] initWithValue:0
                                                    minimum:0
                                                    maximum:100000000];
-        [self addProperty:_startTime];
     }
     return self;
 }

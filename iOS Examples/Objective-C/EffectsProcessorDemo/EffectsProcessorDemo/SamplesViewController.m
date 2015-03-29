@@ -43,7 +43,6 @@
     [AKOrchestra addInstrument:global.reverb];
     
     [[AKManager sharedManager] setIsLogging:YES];
-    [AKOrchestra start];
     
     Playback *playback = [[Playback alloc] initWithStartTime:startTime];
     [global.variableDelay play];
