@@ -43,7 +43,6 @@
     analyzer = [[AKAudioAnalyzer alloc] initWithAudioSource:conv.auxilliaryOutput];
     [AKOrchestra addInstrument:analyzer];
     
-    [AKOrchestra start];
     [analyzer play];
 }
 
