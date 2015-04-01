@@ -15,7 +15,7 @@
 @property AKInstrumentProperty *duration;
 @property AKInstrumentProperty *density;
 @property AKInstrumentProperty *frequencyVariation;
-@property AKInstrumentProperty *frequencyVariationDistribution;
+@property AKInstrumentProperty *frequencyDistribution;
 
 @end
 

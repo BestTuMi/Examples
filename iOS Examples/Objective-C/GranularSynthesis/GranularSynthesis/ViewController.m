@@ -37,7 +37,6 @@
     
     granularInstrument = [[GranularInstrument alloc] init];
     [AKOrchestra addInstrument:granularInstrument];
-    [AKOrchestra start];
     [self updateSliders];
 }
 
@@ -60,7 +59,7 @@
     [AKTools setSlider:self.frequencyVariationSlider
           withProperty:granularInstrument.frequencyVariation];
     [AKTools setSlider:self.frequencyVariationDistributionSlider
-          withProperty:granularInstrument.frequencyVariationDistribution];
+          withProperty:granularInstrument.frequencyDistribution];
 }
 
 - (IBAction)toggleGranularInstrument:(id)sender
@@ -95,7 +94,7 @@
 }
 
 - (IBAction)frequencyVariationDistributionChanged:(UISlider *)sender {
-    [AKTools setProperty:granularInstrument.frequencyVariationDistribution withSlider:sender];
+    [AKTools setProperty:granularInstrument.frequencyDistribution withSlider:sender];
 }
 
 @end
