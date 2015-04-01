@@ -8,42 +8,37 @@
 
 #import "ViewController.h"
 #import "AKFoundation.h"
-#import "AKTools.h"
 #import "ConvolutionInstrument.h"
-#import "LevelMeter.h"
 #import "AKAudioAnalyzer.h"
+
+#import "AKPropertySlider.h"
+#import "AKAudioOutputPlot.h"
 
 @implementation ViewController
 {
     ConvolutionInstrument *conv;
-    
-    AKAudioAnalyzer *analyzer;
-    IBOutlet LevelMeter *levelMeter;
-    AKSequence *continuouslyUpdateLevelMeter;
-    AKEvent *updateLevelMeter;
+
+    IBOutlet AKPropertySlider *dryWetSlider;
+    IBOutlet AKPropertySlider *dishStairwellSlider;
+    IBOutlet AKAudioOutputPlot *plot;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    continuouslyUpdateLevelMeter = [AKSequence sequence];
-    updateLevelMeter = [[AKEvent alloc] initWithBlock:^{
-        [levelMeter setLevel:analyzer.trackedAmplitude.value];
-        [levelMeter setNeedsDisplay];
-        [continuouslyUpdateLevelMeter addEvent:updateLevelMeter afterDuration:0.04];
-        
-    }];
-    [continuouslyUpdateLevelMeter addEvent:updateLevelMeter];
-    [continuouslyUpdateLevelMeter play];
-    
     conv = [[ConvolutionInstrument alloc] init];
     [AKOrchestra addInstrument:conv];
-    [[AKManager sharedManager] setIsLogging:YES];
-    analyzer = [[AKAudioAnalyzer alloc] initWithAudioSource:conv.auxilliaryOutput];
+    
+    AKAudioAnalyzer *analyzer = [[AKAudioAnalyzer alloc] initWithAudioSource:conv.auxilliaryOutput];
     [AKOrchestra addInstrument:analyzer];
     
     [analyzer play];
+    
+    dryWetSlider.property = conv.dryWetBalance;
+    dishStairwellSlider.property = conv.dishWellBalance;
+    
+    [AKManager addBinding:plot];
 }
 
 - (IBAction)start:(id)sender {
@@ -54,11 +49,5 @@
     [conv stop];
 }
 
-- (IBAction)changeDryWet:(id)sender {
-    [AKTools setProperty:conv.dryWetBalance withSlider:(UISlider *)sender];
-}
-- (IBAction)changeDishWell:(id)sender {
-    [AKTools setProperty:conv.dishWellBalance withSlider:(UISlider *)sender];
-}
 
 @end
