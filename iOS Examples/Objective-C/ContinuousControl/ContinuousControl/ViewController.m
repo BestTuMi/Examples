@@ -7,17 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "AKPropertySlider.h"
+#import "AKPropertyLabel.h"
 
 #import "AKTools.h"
 #import "ContinuousControlConductor.h"
 
 @implementation ViewController
 {
-    IBOutlet UISlider *amplitudeSlider;
-    IBOutlet UISlider *modulationSlider;
+    IBOutlet AKPropertySlider *amplitudeSlider;
+    IBOutlet AKPropertySlider *modulationSlider;
     IBOutlet UISlider *modIndexSlider;
-    IBOutlet UILabel *amplitudeLabel;
-    IBOutlet UILabel *modulationLabel;
+    IBOutlet AKPropertyLabel *amplitudeLabel;
+    IBOutlet AKPropertyLabel *modulationLabel;
     IBOutlet UILabel *modIndexLabel;
     
     ContinuousControlConductor *conductor;
@@ -28,14 +30,11 @@
     [super viewDidLoad];
     
     conductor = [[ContinuousControlConductor alloc] init];
+    amplitudeSlider.property = conductor.tweakableInstrument.amplitude;
+    amplitudeLabel.property  = conductor.tweakableInstrument.amplitude;
     
-    [AKTools setLabel:amplitudeLabel  withProperty:conductor.tweakableInstrument.amplitude];
-    [AKTools setLabel:modulationLabel withProperty:conductor.tweakableInstrument.modulation];
-    [AKTools setLabel:modIndexLabel   withProperty:conductor.tweakableInstrument.modIndex];
-    
-    [AKTools setSlider:amplitudeSlider  withProperty:conductor.tweakableInstrument.amplitude];
-    [AKTools setSlider:modulationSlider withProperty:conductor.tweakableInstrument.modulation];
-    [AKTools setSlider:modIndexSlider   withProperty:conductor.tweakableInstrument.modIndex];
+    modulationSlider.property = conductor.tweakableInstrument.modulation;
+    modulationLabel.property  = conductor.tweakableInstrument.modulation;
     
     [conductor.tweakableInstrument.modIndex addObserver:self
                                     forKeyPath:@"value"
@@ -43,37 +42,16 @@
                                        context:Nil];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
+- (void)viewDidDisappear:(BOOL)animated {
     [conductor stop];
 }
 
-- (IBAction)runInstrument:(id)sender
-{
+- (IBAction)runInstrument:(id)sender {
     [conductor start];
 }
 
-- (IBAction)stopInstrument:(id)sender
-{
+- (IBAction)stopInstrument:(id)sender {
     [conductor stop];
-}
-
-- (void)sliderTimerFire:(NSTimer *)timer
-{
-    [AKTools setSlider:modIndexSlider withProperty:conductor.tweakableInstrument.modIndex];
-    [AKTools setLabel:modIndexLabel   withProperty:conductor.tweakableInstrument.modIndex];
-}
-
-- (IBAction)scaleAmplitude:(id)sender
-{
-    [AKTools setProperty:conductor.tweakableInstrument.amplitude withSlider:(UISlider *)sender];
-    [AKTools setLabel:amplitudeLabel withProperty:conductor.tweakableInstrument.amplitude];
-}
-
-- (IBAction)scaleModulation:(id)sender
-{
-    [AKTools setProperty:conductor.tweakableInstrument.modulation withSlider:(UISlider *)sender];
-    [AKTools setLabel:modulationLabel withProperty:conductor.tweakableInstrument.modulation];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
