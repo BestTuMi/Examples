@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AKPropertySlider.h"
 #import "AKPropertyLabel.h"
+#import "AKAudioOutputPlot.h"
 
 #import "AKTools.h"
 #import "ContinuousControlConductor.h"
@@ -21,6 +22,7 @@
     IBOutlet AKPropertyLabel *amplitudeLabel;
     IBOutlet AKPropertyLabel *modulationLabel;
     IBOutlet UILabel *modIndexLabel;
+    IBOutlet AKAudioOutputPlot *plot;
     
     ContinuousControlConductor *conductor;
 }
@@ -40,6 +42,8 @@
                                     forKeyPath:@"value"
                                        options:NSKeyValueObservingOptionNew
                                        context:Nil];
+    
+    [AKManager addBinding:plot];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

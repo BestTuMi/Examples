@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yP6-pE-kvQ">
-                                <rect key="frame" x="30" y="347" width="87" height="21"/>
+                                <rect key="frame" x="30" y="226" width="86.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,7 +29,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-0q-9qK" customClass="AKPropertyLabel">
-                                <rect key="frame" x="468" y="348" width="103" height="20"/>
+                                <rect key="frame" x="467" y="227" width="102.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -36,7 +37,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulation Index" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrN-pd-zcV">
-                                <rect key="frame" x="30" y="497" width="134" height="21"/>
+                                <rect key="frame" x="30" y="316" width="133.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +46,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mod Index" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noF-fy-D63">
-                                <rect key="frame" x="478" y="498" width="92" height="20"/>
+                                <rect key="frame" x="478" y="317" width="92" height="19.5"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -53,7 +54,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amplitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZN-yX-qXZ">
-                                <rect key="frame" x="30" y="197" width="78" height="21"/>
+                                <rect key="frame" x="30" y="136" width="78" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +63,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amplitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL3-g5-IWc" customClass="AKPropertyLabel">
-                                <rect key="frame" x="478" y="198" width="92" height="20"/>
+                                <rect key="frame" x="478" y="137" width="92" height="19.5"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -70,7 +71,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlw-qU-Ytn">
-                                <rect key="frame" x="0.0" y="20" width="300" height="150"/>
+                                <rect key="frame" x="0.0" y="20" width="300" height="90"/>
                                 <color key="backgroundColor" red="1" green="0.096448487979999997" blue="0.0060041529970000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="Stop">
@@ -85,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfW-DP-xTi">
-                                <rect key="frame" x="300" y="20" width="300" height="150"/>
+                                <rect key="frame" x="300" y="20" width="300" height="90"/>
                                 <color key="backgroundColor" red="0.0097406406529999996" green="0.71086275580000002" blue="0.1231240827" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="Start">
@@ -100,13 +101,17 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4OB-Hs-X00">
-                                <rect key="frame" x="28" y="525" width="544" height="31"/>
+                                <rect key="frame" x="28" y="345" width="544" height="31"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-rf-WCV" customClass="AKPropertySlider">
-                                <rect key="frame" x="28" y="225" width="544" height="31"/>
+                                <rect key="frame" x="28" y="165" width="544" height="31"/>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T1t-a5-EvG" customClass="AKPropertySlider">
-                                <rect key="frame" x="28" y="376" width="544" height="31"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-uw-2DD" customClass="AKAudioOutputPlot">
+                                <rect key="frame" x="30" y="398" width="540" height="182"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T1t-a5-EvG" customClass="AKPropertySlider">
+                                <rect key="frame" x="28" y="255" width="544" height="31"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,12 +120,15 @@
                             <constraint firstItem="QZN-yX-qXZ" firstAttribute="leading" secondItem="UBb-rf-WCV" secondAttribute="leading" id="6Nv-64-DLK"/>
                             <constraint firstItem="UBb-rf-WCV" firstAttribute="top" secondItem="UL3-g5-IWc" secondAttribute="bottom" constant="8" id="8DG-8f-TdA"/>
                             <constraint firstItem="Dlw-qU-Ytn" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="8Gd-oE-BmF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eWc-uw-2DD" secondAttribute="bottom" constant="20" id="AO5-HN-gpJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eWc-uw-2DD" secondAttribute="trailing" constant="14" id="BWn-CN-aGW"/>
+                            <constraint firstItem="eWc-uw-2DD" firstAttribute="top" secondItem="4OB-Hs-X00" secondAttribute="bottom" constant="23" id="JUU-jQ-zIg"/>
                             <constraint firstItem="T1t-a5-EvG" firstAttribute="top" secondItem="yP6-pE-kvQ" secondAttribute="bottom" constant="8" id="KVv-4C-uju"/>
                             <constraint firstItem="4OB-Hs-X00" firstAttribute="trailing" secondItem="noF-fy-D63" secondAttribute="trailing" id="LFb-IW-UCu"/>
                             <constraint firstItem="4OB-Hs-X00" firstAttribute="top" secondItem="ZrN-pd-zcV" secondAttribute="bottom" constant="8" id="Ldf-UV-BeN"/>
                             <constraint firstItem="yP6-pE-kvQ" firstAttribute="leading" secondItem="T1t-a5-EvG" secondAttribute="leading" id="Liu-uR-YC4"/>
                             <constraint firstItem="UBb-rf-WCV" firstAttribute="top" secondItem="QZN-yX-qXZ" secondAttribute="bottom" constant="8" id="LvT-oB-adL"/>
-                            <constraint firstItem="4OB-Hs-X00" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.9" id="Mbu-C7-SBZ"/>
+                            <constraint firstItem="4OB-Hs-X00" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.6" id="Mbu-C7-SBZ"/>
                             <constraint firstItem="T1t-a5-EvG" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.9" id="Mn9-uw-3aN"/>
                             <constraint firstItem="4OB-Hs-X00" firstAttribute="top" secondItem="noF-fy-D63" secondAttribute="bottom" constant="8" id="N7v-cN-rbC"/>
                             <constraint firstItem="UBb-rf-WCV" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.9" id="PAu-ai-ncm"/>
@@ -128,17 +136,18 @@
                             <constraint firstItem="yfW-DP-xTi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="QuE-Fz-AKf"/>
                             <constraint firstItem="UL3-g5-IWc" firstAttribute="trailing" secondItem="UBb-rf-WCV" secondAttribute="trailing" id="avX-zc-1mH"/>
                             <constraint firstAttribute="centerX" secondItem="UBb-rf-WCV" secondAttribute="centerX" id="cw9-j8-bhB"/>
-                            <constraint firstItem="Dlw-qU-Ytn" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" id="eJR-ZC-jtO"/>
+                            <constraint firstItem="Dlw-qU-Ytn" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.15" id="eJR-ZC-jtO"/>
                             <constraint firstAttribute="centerX" secondItem="4OB-Hs-X00" secondAttribute="centerX" id="fBv-mt-rQo"/>
                             <constraint firstAttribute="trailing" secondItem="yfW-DP-xTi" secondAttribute="trailing" id="g0q-dc-yqd"/>
-                            <constraint firstItem="T1t-a5-EvG" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.65" id="h3X-yL-TsU"/>
+                            <constraint firstItem="T1t-a5-EvG" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.45" id="h3X-yL-TsU"/>
                             <constraint firstItem="4OB-Hs-X00" firstAttribute="leading" secondItem="ZrN-pd-zcV" secondAttribute="leading" id="nak-Db-AB5"/>
                             <constraint firstItem="4OB-Hs-X00" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.9" id="oOy-lQ-OdD"/>
                             <constraint firstItem="Dlw-qU-Ytn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qav-y2-xdC"/>
                             <constraint firstItem="Dlw-qU-Ytn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="rBP-sC-zcS"/>
-                            <constraint firstItem="UBb-rf-WCV" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.4" id="rrZ-48-OQ7"/>
+                            <constraint firstItem="UBb-rf-WCV" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="bottom" multiplier="0.3" id="rrZ-48-OQ7"/>
                             <constraint firstItem="T1t-a5-EvG" firstAttribute="top" secondItem="RJj-0q-9qK" secondAttribute="bottom" constant="8" id="sdW-U6-XDL"/>
-                            <constraint firstItem="yfW-DP-xTi" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" id="tk1-sL-PrJ"/>
+                            <constraint firstItem="yfW-DP-xTi" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.15" id="tk1-sL-PrJ"/>
+                            <constraint firstItem="eWc-uw-2DD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="vUA-c8-pG0"/>
                             <constraint firstAttribute="centerX" secondItem="T1t-a5-EvG" secondAttribute="centerX" id="xUc-qY-s2i"/>
                         </constraints>
                     </view>
@@ -149,6 +158,7 @@
                         <outlet property="modIndexSlider" destination="4OB-Hs-X00" id="8hz-8t-KZ5"/>
                         <outlet property="modulationLabel" destination="RJj-0q-9qK" id="NXl-bK-5kL"/>
                         <outlet property="modulationSlider" destination="T1t-a5-EvG" id="QLq-jJ-hcM"/>
+                        <outlet property="plot" destination="eWc-uw-2DD" id="Pn2-VD-0KH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

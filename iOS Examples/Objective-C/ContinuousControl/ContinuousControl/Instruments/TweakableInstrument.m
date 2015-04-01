@@ -19,7 +19,7 @@
         
         _amplitude  = [[AKInstrumentProperty alloc] initWithValue:0.1
                                                           minimum:0.0
-                                                          maximum:0.3];
+                                                          maximum:0.8];
         
         _frequency  = [[AKInstrumentProperty alloc] initWithValue:220
                                                           minimum:110
