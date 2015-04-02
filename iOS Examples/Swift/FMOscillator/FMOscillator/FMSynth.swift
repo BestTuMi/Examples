@@ -28,14 +28,13 @@ class FMSynth: AKInstrument {
         addProperty(modulationIndex)
         
         let fmOscillator = AKFMOscillator(
-            functionTable: AKManager.standardSineWave(),
+            waveform: AKTable.standardSineWave(),
             baseFrequency: frequency,
             carrierMultiplier: carrierMultiplier,
             modulatingMultiplier: modulatingMultiplier,
             modulationIndex: modulationIndex,
             amplitude: amplitude
         )
-        connect(fmOscillator)
-        connect(AKAudioOutput(audioSource: fmOscillator))
+        setAudioOutput(fmOscillator)
     }
 }

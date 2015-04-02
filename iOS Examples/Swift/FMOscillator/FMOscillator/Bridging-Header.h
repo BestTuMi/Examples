@@ -7,3 +7,5 @@
 
 #import "AKFoundation.h"
 #import "AKTools.h"
+#import "AKPropertySlider.h"
+#import "AKPropertyLabel.h"

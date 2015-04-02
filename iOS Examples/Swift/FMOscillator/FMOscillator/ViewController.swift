@@ -6,80 +6,43 @@
 //  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
 //
 
-import UIKit
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var toggleSwitchClicked: UISwitch!
     
-    @IBOutlet var frequencyLabel : UILabel!
-    @IBOutlet var amplitudeLabel : UILabel!
-    @IBOutlet var carrierMultiplierLabel : UILabel!
-    @IBOutlet var modulatingMultiplierLabel : UILabel!
-    @IBOutlet var modulationIndexLabel : UILabel!
+    @IBOutlet var frequencyLabel             : AKPropertyLabel!
+    @IBOutlet var amplitudeLabel             : AKPropertyLabel!
+    @IBOutlet var carrierMultiplierLabel     : AKPropertyLabel!
+    @IBOutlet var modulatingMultiplierLabel  : AKPropertyLabel!
+    @IBOutlet var modulationIndexLabel       : AKPropertyLabel!
     
-    @IBOutlet var frequencySlider : UISlider!
-    @IBOutlet var amplitudeSlider : UISlider!
-    @IBOutlet var carrierMultiplierSlider : UISlider!
-    @IBOutlet var modulatingMultiplierSlider : UISlider!
-    @IBOutlet var modulationIndexSlider : UISlider!
+    @IBOutlet var frequencySlider            : AKPropertySlider!
+    @IBOutlet var amplitudeSlider            : AKPropertySlider!
+    @IBOutlet var carrierMultiplierSlider    : AKPropertySlider!
+    @IBOutlet var modulatingMultiplierSlider : AKPropertySlider!
+    @IBOutlet var modulationIndexSlider      : AKPropertySlider!
     
     let fmSynth = FMSynth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        AKOrchestra.addInstrument(fmSynth)
-        AKOrchestra.start()
         
-        updateLabels()
-        updateSliders()
+        AKOrchestra.addInstrument(fmSynth)
+        
+        frequencySlider.property            = fmSynth.frequency
+        amplitudeSlider.property            = fmSynth.amplitude
+        carrierMultiplierSlider.property    = fmSynth.carrierMultiplier
+        modulatingMultiplierSlider.property = fmSynth.modulatingMultiplier
+        modulationIndexSlider.property      = fmSynth.modulationIndex
+
+        frequencyLabel.property             = fmSynth.frequency
+        amplitudeLabel.property             = fmSynth.amplitude
+        carrierMultiplierLabel.property     = fmSynth.carrierMultiplier
+        modulatingMultiplierLabel.property  = fmSynth.modulatingMultiplier
+        modulationIndexLabel.property       = fmSynth.modulationIndex
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     @IBAction func toggleFMsynth(sender: AnyObject) {
         toggleSwitchClicked.on ?  fmSynth.play() : fmSynth.stop()
-    }
-    
-    func updateLabels()->Void {
-        AKTools.setLabel(frequencyLabel, withProperty: fmSynth.frequency)
-        AKTools.setLabel(amplitudeLabel, withProperty: fmSynth.amplitude)
-        AKTools.setLabel(carrierMultiplierLabel, withProperty: fmSynth.carrierMultiplier)
-        AKTools.setLabel(modulatingMultiplierLabel, withProperty: fmSynth.modulatingMultiplier)
-        AKTools.setLabel(modulationIndexLabel, withProperty: fmSynth.modulationIndex)
-    }
-    
-    func updateSliders()->Void {
-        AKTools.setSlider(frequencySlider, withProperty: fmSynth.frequency)
-        AKTools.setSlider(amplitudeSlider, withProperty: fmSynth.amplitude)
-        AKTools.setSlider(carrierMultiplierSlider, withProperty: fmSynth.carrierMultiplier)
-        AKTools.setSlider(modulatingMultiplierSlider, withProperty: fmSynth.modulatingMultiplier)
-        AKTools.setSlider(modulationIndexSlider, withProperty: fmSynth.modulationIndex)
-    }
-    
-    
-    @IBAction func frequencySliderMoved(sender : AnyObject) {
-        AKTools.setProperty(fmSynth.frequency, withSlider: sender as UISlider)
-        updateLabels()
-    }
-    @IBAction func amplitudeSliderMoved(sender : AnyObject) {
-        AKTools.setProperty(fmSynth.amplitude, withSlider: sender as UISlider)
-        updateLabels()
-    }
-    @IBAction func carrierMultiplierSliderMoved(sender : AnyObject) {
-        AKTools.setProperty(fmSynth.carrierMultiplier, withSlider: sender as UISlider)
-        updateLabels()
-    }
-    @IBAction func modulatingMultiplierSliderMoved(sender : AnyObject) {
-        AKTools.setProperty(fmSynth.modulatingMultiplier, withSlider: sender as UISlider)
-        updateLabels()
-    }
-    @IBAction func modulationIndexSliderMoved(sender : AnyObject) {
-        AKTools.setProperty(fmSynth.modulationIndex, withSlider: sender as UISlider)
-        updateLabels()
     }
 }
