@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AKFoundation.h"
 #import "HarmonizerInstrument.h"
+#import "AKSampler.h"
 
 @implementation ViewController
 {
