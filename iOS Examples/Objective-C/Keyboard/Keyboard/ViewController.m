@@ -13,8 +13,6 @@
 
 
 @interface ViewController () {
-
-
     Conductor *conductor;
 }
 @end
