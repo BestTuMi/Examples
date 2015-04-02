@@ -28,7 +28,7 @@
 
 - (void)playPhraseOfNotesOfDuration:(float)duration
 {
-    AKPhrase *phrase = [[AKPhrase alloc] init];
+    AKPhrase *phrase = [AKPhrase phrase];
     for (int i = 0; i <= 12 ; i++) {
         SeqInstrumentNote *note = [[SeqInstrumentNote alloc] init];
         note.frequency.value = 440*(pow(2.0f,(float)i/12));
@@ -40,7 +40,7 @@
 
 - (void)playSequenceOfNotePropertiesOfDuration:(float)duration
 {
-    sequence = [[AKSequence alloc] init];
+    sequence = [AKSequence sequence];
 
     SeqInstrumentNote *note = [[SeqInstrumentNote alloc] initWithFrequency:440];
 
@@ -62,7 +62,7 @@
 
 - (void)playSequenceOfInstrumentPropertiesOfDuration:(float)duration
 {
-    sequence = [[AKSequence alloc] init];
+    sequence = [AKSequence sequence];
 
     SeqInstrumentNote *note = [[SeqInstrumentNote alloc] initWithFrequency:440];
 
