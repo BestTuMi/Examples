@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
 //
 
-#import "AKInstrument.h"
 #import "AKFoundation.h"
 
 @interface FMOscillator : AKInstrument

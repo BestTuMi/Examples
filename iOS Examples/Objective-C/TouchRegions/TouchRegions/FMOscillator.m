@@ -15,33 +15,22 @@
     if (self) {
         
         // INSTRUMENT CONTROL ==================================================
-        _frequency            = [[AKInstrumentProperty alloc] initWithValue:440 minimum:1.0 maximum:880];
-        _carrierMultiplier    = [[AKInstrumentProperty alloc] initWithValue:1.0 minimum:0.0 maximum:2.0];
-        _modulatingMultiplier = [[AKInstrumentProperty alloc] initWithValue:1.0 minimum:0.0 maximum:2.0];
-        _modulationIndex      = [[AKInstrumentProperty alloc] initWithValue:15  minimum:0   maximum:30];
-        _amplitude            = [[AKInstrumentProperty alloc] initWithValue:0.0 minimum:0   maximum:0.2];
-        
-        [self addProperty:_frequency];
-        [self addProperty:_carrierMultiplier];
-        [self addProperty:_modulatingMultiplier];
-        [self addProperty:_modulationIndex];
-        [self addProperty:_amplitude];
+        _frequency            = [self createPropertyWithValue:440 minimum:1.0 maximum:880];
+        _carrierMultiplier    = [self createPropertyWithValue:1.0 minimum:0.0 maximum:2.0];
+        _modulatingMultiplier = [self createPropertyWithValue:1.0 minimum:0.0 maximum:2.0];
+        _modulationIndex      = [self createPropertyWithValue:15  minimum:0   maximum:30];
+        _amplitude            = [self createPropertyWithValue:0.0 minimum:0   maximum:0.2];
         
         // INSTRUMENT DEFINITION ===============================================
-        
         AKFMOscillator *fmOscillator;
-        fmOscillator = [[AKFMOscillator alloc] initWithFunctionTable:[AKManager standardSineWave]
-                                                       baseFrequency:_frequency
-                                                   carrierMultiplier:_carrierMultiplier
-                                                modulatingMultiplier:_modulatingMultiplier
-                                                     modulationIndex:_modulationIndex
-                                                           amplitude:_amplitude];
-        [self connect:fmOscillator];
+        fmOscillator = [[AKFMOscillator alloc] initWithWaveform:[AKTable standardSineWave]
+                                                  baseFrequency:_frequency
+                                              carrierMultiplier:_carrierMultiplier
+                                           modulatingMultiplier:_modulatingMultiplier
+                                                modulationIndex:_modulationIndex
+                                                      amplitude:_amplitude];
         
-        // AUDIO OUTPUT ========================================================
-        
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
-        [self connect:audio];
+        [self setAudioOutput:fmOscillator];
     }
     return self;
 }
