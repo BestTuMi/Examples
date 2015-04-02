@@ -16,30 +16,21 @@
         
         // NOTE BASED CONTROL ==================================================
         AudioFilePlayerNote *note = [[AudioFilePlayerNote alloc] init];
-        [self addNoteProperty:note.speed];
         
         // INSTRUMENT DEFINITION ===============================================
-        NSString *file;
-        file = [[NSBundle mainBundle] pathForResource:@"blaster" ofType:@"aiff"];
-        AKSoundFile *fileTable;
-        fileTable = [[AKSoundFile alloc] initWithFilename:file];
-        [self addFunctionTable:fileTable];
+        NSString *file = [[NSBundle mainBundle] pathForResource:@"blaster" ofType:@"aiff"];
+        AKSoundFileTable *fileTable = [[AKSoundFileTable alloc] initWithFilename:file];
         
         AKMonoSoundFileLooper *looper;
         looper = [AKMonoSoundFileLooper looperWithSoundFile:fileTable];
         looper.frequencyRatio = note.speed;
         looper.loopMode = [AKMonoSoundFileLooper loopPlaysOnce];
-        [self connect:looper];
         
         AKReverb *reverb;
         reverb = [AKReverb reverbWithInput:looper];
         reverb.feedback.value = 0.85;
-        [self connect:reverb];
         
-        // AUDIO OUTPUT ========================================================
-        AKAudioOutput *audio;
-        audio = [[AKAudioOutput alloc] initWithStereoAudioSource:reverb];
-        [self connect:audio];
+        [self setStereoAudioOutput:reverb];
     }
     return self;
 }
@@ -56,10 +47,7 @@
 {
     self = [super init];
     if(self) {
-        _speed = [[AKNoteProperty alloc] initWithValue:1.0
-                                               minimum:0.2
-                                               maximum:2.0];
-        [self addProperty:_speed];
+        _speed = [self createPropertyWithValue:1.0 minimum:0.2 maximum:2.0];
     }
     return self;
 }
