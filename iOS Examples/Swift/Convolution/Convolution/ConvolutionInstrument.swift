@@ -20,16 +20,14 @@ class ConvolutionInstrument: AKInstrument
         let file = String(NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
         let loop = AKFileInput(filename: file)
         
-        let dish = String(NSBundle.mainBundle().pathForResource("dish", ofType: "wav")!)
+        let dish = String(NSBundle.mainBundle().pathForResource("dish",      ofType: "wav")!)
         let well = String(NSBundle.mainBundle().pathForResource("Stairwell", ofType: "wav")!)
         
-        let dishConv = AKConvolution(input: loop.leftOutput, impulseResponseFilename: dish)
-
+        let dishConv = AKConvolution(input: loop.leftOutput,  impulseResponseFilename: dish)
         let wellConv = AKConvolution(input: loop.rightOutput, impulseResponseFilename: well)
 
-        let balance = AKMix(input1: dishConv, input2: wellConv, balance: dishWellBalance)
-        
-        let dryWet = AKMix(input1: loop.leftOutput, input2: balance, balance: dryWetBalance)
+        let balance = AKMix(input1: dishConv,        input2: wellConv, balance: dishWellBalance)
+        let dryWet  = AKMix(input1: loop.leftOutput, input2: balance,  balance: dryWetBalance)
     
         setAudioOutput(dryWet)
     }

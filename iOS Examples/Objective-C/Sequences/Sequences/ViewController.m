@@ -22,7 +22,6 @@
 {
     [super viewDidLoad];
     conductor = [[SequencesConductor alloc] init];
-    
 }
 
 - (float)getDuration {
@@ -32,9 +31,11 @@
 - (IBAction)playPhrase:(id)sender {
     [conductor playPhraseOfNotesOfDuration:[self getDuration]];
 }
+
 - (IBAction)playSequenceOfNoteProperties:(id)sender {
     [conductor playSequenceOfNotePropertiesOfDuration:[self getDuration]];
 }
+
 - (IBAction)playSequenceOfInstrumentProperties:(id)sender {
     [conductor playSequenceOfInstrumentPropertiesOfDuration:[self getDuration]];
 }
