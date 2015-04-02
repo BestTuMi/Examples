@@ -17,9 +17,7 @@
         SeqInstrumentNote *note = [[SeqInstrumentNote alloc] init];
         
         // INSTRUMENT CONTROL ==================================================
-        _modulation  = [[AKInstrumentProperty alloc] initWithValue:1.0
-                                                           minimum:0.5
-                                                           maximum:2.0];
+        _modulation = [self createPropertyWithValue:1.0 minimum:0.5 maximum:2.0];
         
         // INSTRUMENT DEFINITION ===============================================        
         AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
@@ -47,10 +45,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _frequency = [[AKNoteProperty alloc] initWithValue:220
-                                                   minimum:110
-                                                   maximum:880];
-        [self addProperty:_frequency];
+        _frequency = [self createPropertyWithValue:220 minimum:110 maximum:880];
     }
     return self;
 }
