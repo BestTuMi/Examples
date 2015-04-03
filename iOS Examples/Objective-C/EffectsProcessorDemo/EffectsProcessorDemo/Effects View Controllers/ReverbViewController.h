@@ -6,10 +6,8 @@
 //  Copyright (c) 2013 Aurelius Prochazka. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface ReverbViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UISlider *feedbackSlider;
-@property (strong, nonatomic) IBOutlet UISlider *mixSlider;
 
 @end

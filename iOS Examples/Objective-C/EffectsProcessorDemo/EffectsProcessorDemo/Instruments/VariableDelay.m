@@ -16,20 +16,17 @@
     if (self) {
         
         // Instrument Based Control
-        _delayTime = [[AKInstrumentProperty alloc] initWithValue:0
-                                                         minimum:0
-                                                         maximum:1.0];
-        
-        _mix = [[AKInstrumentProperty alloc] initWithValue:0
-                                                   minimum:0
-                                                   maximum:0.5];
+        _delayTime = [self createPropertyWithValue:0 minimum:0 maximum:1.0];
+        _mix       = [self createPropertyWithValue:0 minimum:0 maximum:0.5];
         
         // Instrument Definition
         AKVariableDelay *leftDelay = [AKVariableDelay delayWithInput:audioSource.leftOutput];
         leftDelay.delayTime = _delayTime;
+        [self connect:leftDelay];
         
         AKVariableDelay *rightDelay = [AKVariableDelay delayWithInput:audioSource.rightOutput];
         rightDelay.delayTime = _delayTime;
+        [self connect:rightDelay];
         
         AKMix *leftMix = [[AKMix alloc] initWithInput1:audioSource.leftOutput
                                                 input2:leftDelay

@@ -16,26 +16,20 @@
     if (self) {
         
         // Instrument Based Control
-        _cutoffFrequency = [[AKInstrumentProperty alloc] initWithValue:1000
-                                                               minimum:0
-                                                               maximum:20000];
-        
-        _resonance = [[AKInstrumentProperty alloc] initWithValue:0.5
-                                                         minimum:0
-                                                         maximum:0.99];
-        
-        _mix = [[AKInstrumentProperty alloc] initWithValue:0
-                                                   minimum:0
-                                                   maximum:1.0];
+        _cutoffFrequency = [self createPropertyWithValue:1000 minimum:0 maximum:20000];
+        _resonance       = [self createPropertyWithValue:0.5  minimum:0 maximum:0.99];
+        _mix             = [self createPropertyWithValue:0    minimum:0 maximum:1.0];
         
         // Instrument Definition
         AKMoogLadder *leftMoogLadder = [AKMoogLadder filterWithInput:audioSource.leftOutput];
         leftMoogLadder.cutoffFrequency = _cutoffFrequency;
         leftMoogLadder.resonance = _resonance;
+        [self connect:leftMoogLadder];
         
         AKMoogLadder *rightMoogLadder = [AKMoogLadder filterWithInput:audioSource.rightOutput];
         rightMoogLadder.cutoffFrequency = _cutoffFrequency;
         rightMoogLadder.resonance = _resonance;
+        [self connect:rightMoogLadder];
         
         AKMix *leftMix = [[AKMix alloc] initWithInput1:audioSource.leftOutput
                                                 input2:leftMoogLadder

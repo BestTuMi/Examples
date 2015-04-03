@@ -8,27 +8,19 @@
 
 #import "VariableDelayViewController.h"
 #import "SharedStore.h"
-#import "AKTools.h"
+#import "AKPropertySlider.h"
 
-@implementation VariableDelayViewController
+@implementation VariableDelayViewController {
+    IBOutlet AKPropertySlider *delayTimeSlider;
+    IBOutlet AKPropertySlider *mixSlider;
+}
 
 - (void)viewDidLoad
 {
     SharedStore *global = [SharedStore globals];
-    [AKTools setSlider:_delayTimeSlider withProperty:global.variableDelay.delayTime];
-    [AKTools setSlider:_mixSlider withProperty:global.variableDelay.mix];
+    
+    delayTimeSlider.property = global.variableDelay.delayTime;
+    mixSlider.property       = global.variableDelay.mix;
 }
 
-
-- (IBAction)changeDelayTime:(UISlider *)sender
-{
-    SharedStore *global = [SharedStore globals];
-    [AKTools setProperty:global.variableDelay.delayTime withSlider:sender];
-}                 
-
-- (IBAction)changeMix:(UISlider *)sender
-{
-    SharedStore *global = [SharedStore globals];
-    [AKTools setProperty:global.variableDelay.mix withSlider:sender];
-}
 @end

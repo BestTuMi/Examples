@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MoogLadderViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UISlider *cutoffFrequencySlider;
-@property (strong, nonatomic) IBOutlet UISlider *resonanceSlider;
-@property (strong, nonatomic) IBOutlet UISlider *mixSlider;
+
 
 @end

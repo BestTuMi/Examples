@@ -10,7 +10,6 @@
 
 @interface VariableDelayViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UISlider *delayTimeSlider;
-@property (strong, nonatomic) IBOutlet UISlider *mixSlider;
+
 
 @end

@@ -41,9 +41,9 @@
         // AUDIO OUTPUT ========================================================
         
         AKAudioOutput *audio;
-        //audio = [[AKAudioOutput alloc] initWithStereoAudioSource:audioSource];
         audio = [[AKAudioOutput alloc] initWithLeftAudio:leftMix
                                               rightAudio:rightMix];
+        [self connect:audio];
         
         // Reset Inputs
         [self resetParameter:audioSource];

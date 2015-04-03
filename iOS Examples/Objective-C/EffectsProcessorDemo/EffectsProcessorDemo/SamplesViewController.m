@@ -42,8 +42,6 @@
     [AKOrchestra addInstrument:global.moogLadder];
     [AKOrchestra addInstrument:global.reverb];
     
-    [[AKManager sharedManager] setIsLogging:YES];
-    
     Playback *playback = [[Playback alloc] initWithStartTime:startTime];
     [global.variableDelay play];
     [global.moogLadder play];

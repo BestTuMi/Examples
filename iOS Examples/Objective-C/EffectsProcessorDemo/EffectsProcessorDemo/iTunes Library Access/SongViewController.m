@@ -86,8 +86,7 @@
     }
     _playButton.hidden = NO;
     
-    [[AKManager sharedManager] stop];
-    [AKOrchestra reset];
+//    [AKOrchestra reset];
     
     // Create the orchestra and instruments
     global.audioFilePlayer = [[AudioFilePlayer alloc] init];
@@ -101,8 +100,6 @@
     [AKOrchestra addInstrument:global.moogLadder];
     [AKOrchestra addInstrument:global.reverb];
     
-    [[AKManager sharedManager] setIsLogging:YES];
-    [AKOrchestra start];
     [global.variableDelay play];
     [global.moogLadder play];
     [global.reverb play];

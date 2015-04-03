@@ -8,25 +8,18 @@
 
 #import "ReverbViewController.h"
 #import "SharedStore.h"
-#import "AKTools.h"
+#import "AKPropertySlider.h"
 
-@implementation ReverbViewController
+@implementation ReverbViewController {
+    IBOutlet AKPropertySlider *feedbackSlider;
+    IBOutlet AKPropertySlider *mixSlider;
+}
 
 - (void)viewDidLoad
 {
     SharedStore *global = [SharedStore globals];
-    [AKTools setSlider:_feedbackSlider withProperty:global.reverb.reverbFeedback];
-    [AKTools setSlider:_mixSlider withProperty:global.reverb.mix];
-}
-
-- (IBAction)changeReverbAmount:(UISlider *)sender {
-    SharedStore *global = [SharedStore globals];
-    [AKTools setProperty:global.reverb.reverbFeedback withSlider:sender];
-}
-
-- (IBAction)changeMix:(UISlider *)sender {
-    SharedStore *global = [SharedStore globals];
-    [AKTools setProperty:global.reverb.mix withSlider:sender];
+    feedbackSlider.property = global.reverb.reverbFeedback;
+    mixSlider.property = global.reverb.mix;
 }
 
 @end
