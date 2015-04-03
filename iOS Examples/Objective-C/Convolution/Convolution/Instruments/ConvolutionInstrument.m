@@ -16,13 +16,8 @@
     if (self) {
         
         // INPUTS AND CONTROLS =================================================
-        _dishWellBalance = [[AKInstrumentProperty alloc] initWithValue:0
-                                                               minimum:0
-                                                               maximum:1.0];
-        
-        _dryWetBalance = [[AKInstrumentProperty alloc] initWithValue:0
-                                                             minimum:0
-                                                             maximum:0.1];
+        _dishWellBalance = [self createPropertyWithValue:0 minimum:0 maximum:1.0];
+        _dryWetBalance   = [self createPropertyWithValue:0 minimum:0 maximum:0.1];
         
         // INSTRUMENT DEFINITION ===============================================
         
