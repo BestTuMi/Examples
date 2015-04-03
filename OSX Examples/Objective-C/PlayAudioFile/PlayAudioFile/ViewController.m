@@ -21,7 +21,6 @@
     // Create the orchestra and instruments
     audioFilePlayer = [[AudioFilePlayer alloc] init];
     [AKOrchestra addInstrument:audioFilePlayer];
-    [AKOrchestra start];
 }
 
 - (IBAction)touchPlayButton:(id)sender
