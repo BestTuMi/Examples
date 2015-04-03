@@ -14,31 +14,28 @@ class HarmonizerInstrument: AKInstrument {
         super.init()
         
         let microphone: AKAudioInput = AKAudioInput()
-        connect (microphone)
         
         let microphoneFFT = AKFFT(
             input: microphone,
             fftSize: 2048.ak,
             overlap: 256.ak,
-            windowType: AKFFTWindowType.VonHann,
+            windowType: AKFFT.hannWindow(),
             windowFilterSize: 2048.ak
         )
-        connect(microphoneFFT)
         
         let scaledFFT = AKScaledFFT(
             signal: microphoneFFT,
             frequencyRatio: 2.ak,
-            formantRetainMethod: AKScaledFFTFormantRetainMethod.LifteredCepstrum,
+            formantRetainMethod: AKScaledFFT.lifteredCepstrumFormantRetainMethod(),
             amplitudeRatio: 2.ak,
             cepstrumCoefficients: nil
         )
-        connect(scaledFFT)
     
         let mixedFFT = AKMixedFFT(signal1: microphoneFFT, signal2: scaledFFT)
-        connect(mixedFFT)
         
         let audioOutput = AKResynthesizedAudio(signal: mixedFFT)
         connect(audioOutput)
-        connect(AKAudioOutput(audioSource: audioOutput))
+        
+        setAudioOutput(audioOutput)
     }
 }
