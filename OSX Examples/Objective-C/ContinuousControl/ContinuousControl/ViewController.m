@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AKTools.h"
+#import "AKPropertySlider.h"
 #import "ContinuousControlConductor.h"
 @interface ViewController ()
 
@@ -15,9 +16,9 @@
 
 @implementation ViewController
 {
-    IBOutlet NSSlider *amplitudeSlider;
-    IBOutlet NSSlider *modulationSlider;
-    IBOutlet NSSlider *modIndexSlider;
+    IBOutlet AKPropertySlider *amplitudeSlider;
+    IBOutlet AKPropertySlider *modulationSlider;
+    IBOutlet AKPropertySlider *modIndexSlider;
     IBOutlet NSTextField *amplitudeLabel;
     IBOutlet NSTextField *modulationLabel;
     IBOutlet NSTextField *modIndexLabel;
@@ -35,9 +36,12 @@
     [AKTools setTextField:modulationLabel withProperty:conductor.tweakableInstrument.modulation];
     [AKTools setTextField:modIndexLabel   withProperty:conductor.tweakableInstrument.modIndex];
     
-    [AKTools setSlider:amplitudeSlider  withProperty:conductor.tweakableInstrument.amplitude];
-    [AKTools setSlider:modulationSlider withProperty:conductor.tweakableInstrument.modulation];
-    [AKTools setSlider:modIndexSlider   withProperty:conductor.tweakableInstrument.modIndex];
+    amplitudeSlider.property  = conductor.tweakableInstrument.amplitude;
+    modulationSlider.property = conductor.tweakableInstrument.modulation;
+    modIndexSlider.property   = conductor.tweakableInstrument.modIndex;
+//    [AKTools setSlider:amplitudeSlider  withProperty:conductor.tweakableInstrument.amplitude];
+//    [AKTools setSlider:modulationSlider withProperty:conductor.tweakableInstrument.modulation];
+//    [AKTools setSlider:modIndexSlider   withProperty:conductor.tweakableInstrument.modIndex];
     
     [conductor.tweakableInstrument.modIndex addObserver:self
                                              forKeyPath:@"value"
@@ -53,18 +57,6 @@
 - (IBAction)stopInstrument:(id)sender
 {
     [conductor stop];
-}
-
-- (IBAction)scaleAmplitude:(id)sender
-{
-    [AKTools setProperty:conductor.tweakableInstrument.amplitude withSlider:(NSSlider *)sender];
-    [AKTools setTextField:amplitudeLabel withProperty:conductor.tweakableInstrument.amplitude];
-}
-
-- (IBAction)scaleModulation:(id)sender
-{
-    [AKTools setProperty:conductor.tweakableInstrument.modulation withSlider:(NSSlider *)sender];
-    [AKTools setTextField:modulationLabel withProperty:conductor.tweakableInstrument.modulation];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath

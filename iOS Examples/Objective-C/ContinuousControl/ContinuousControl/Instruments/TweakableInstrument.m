@@ -16,22 +16,10 @@
     if (self) {
         
         // INPUTS AND CONTROLS =================================================
-        
-        _amplitude  = [[AKInstrumentProperty alloc] initWithValue:0.1
-                                                          minimum:0.0
-                                                          maximum:0.8];
-        
-        _frequency  = [[AKInstrumentProperty alloc] initWithValue:220
-                                                          minimum:110
-                                                          maximum:880];
-        
-        _modulation = [[AKInstrumentProperty alloc] initWithValue:0.5
-                                                          minimum:0.25
-                                                          maximum:2.2];
-        
-        _modIndex   = [[AKInstrumentProperty alloc] initWithValue:1.0
-                                                          minimum:0.0
-                                                          maximum:25];
+        _amplitude  = [self createPropertyWithValue:0.1 minimum:0.0  maximum:0.8];
+        _frequency  = [self createPropertyWithValue:220 minimum:110  maximum:880];
+        _modulation = [self createPropertyWithValue:0.5 minimum:0.25 maximum:2.2];
+        _modIndex   = [self createPropertyWithValue:1.0 minimum:0.0  maximum:25];
         
         
         // INSTRUMENT DEFINITION ===============================================        
