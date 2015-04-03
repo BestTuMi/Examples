@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -18,29 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.001" maxValue="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="v5p-rX-Pyj">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.001" maxValue="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="v5p-rX-Pyj" customClass="AKPropertySlider">
                                 <rect key="frame" x="58" y="165" width="484" height="31"/>
-                                <connections>
-                                    <action selector="frequencyChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="RmA-6C-X3q"/>
-                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="1PP-d2-rrA">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="1PP-d2-rrA" customClass="AKPropertySlider">
                                 <rect key="frame" x="58" y="255" width="484" height="31"/>
-                                <connections>
-                                    <action selector="durationChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8Hd-t6-lO5"/>
-                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="hco-su-tVt">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="hco-su-tVt" customClass="AKPropertySlider">
                                 <rect key="frame" x="58" y="435" width="484" height="31"/>
-                                <connections>
-                                    <action selector="frequencyVariationChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="KfR-zi-95l"/>
-                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-jd-7Su">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-jd-7Su" customClass="AKPropertySlider">
                                 <rect key="frame" x="58" y="525" width="484" height="31"/>
-                                <connections>
-                                    <action selector="frequencyVariationDistributionChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="veG-YK-q6E"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grain Density" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-LJ-dsA">
                                 <rect key="frame" x="248" y="316" width="104" height="21"/>
@@ -98,11 +86,8 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.05000000074505806" minValue="0.0010000000474974513" maxValue="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-DY-EtP">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.05000000074505806" minValue="0.0010000000474974513" maxValue="0.05000000074505806" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-DY-EtP" customClass="AKPropertySlider">
                                 <rect key="frame" x="59" y="75" width="484" height="31"/>
-                                <connections>
-                                    <action selector="mixChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pmS-d8-wUS"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCo-3Y-XLY">
                                 <rect key="frame" x="287" y="46" width="28" height="21"/>
@@ -125,11 +110,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1500" minValue="1" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="hJa-4g-O21">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1500" minValue="1" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="hJa-4g-O21" customClass="AKPropertySlider">
                                 <rect key="frame" x="58" y="345" width="484" height="31"/>
-                                <connections>
-                                    <action selector="denistyChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Wnu-X4-GWB"/>
-                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

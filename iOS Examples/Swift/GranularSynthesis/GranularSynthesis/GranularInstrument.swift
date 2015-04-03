@@ -55,9 +55,7 @@ class GranularSynth: AKInstrument
         
         let file = String (NSBundle.mainBundle().pathForResource("PianoBassDrumLoop", ofType: "wav")!)
         
-        let soundFile = AKSoundFile(filename: file)
-        soundFile.size = 16384
-        addFunctionTable(soundFile)
+        let soundFile = AKSoundFileTable(filename: file, size: 16384)
         
         let synth =  AKGranularSynthesizer(
             grainWaveform: soundFile,
@@ -67,13 +65,10 @@ class GranularSynth: AKInstrument
         synth.density = density
         synth.frequencyVariation = frequencyVariation
         synth.frequencyVariationDistribution = frequencyVariationDistribution
-        connect(synth)
         
         let file2 = String (NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
         
-        let soundFile2 = AKSoundFile(filename: file2)
-        soundFile2.size = 16384
-        addFunctionTable(soundFile2)
+        let soundFile2 = AKSoundFileTable(filename: file2, size:16384)
         
         let synth2 =  AKGranularSynthesizer(
             grainWaveform: soundFile2,
@@ -83,11 +78,10 @@ class GranularSynth: AKInstrument
         synth2.density = density
         synth2.frequencyVariation = frequencyVariation
         synth2.frequencyVariationDistribution = frequencyVariationDistribution
-        connect(synth2)
         
         let mixer = AKMix(input1: synth, input2: synth2, balance: mix)
-        connect(mixer)
         
-        connect(AKAudioOutput(audioSource: mixer.scaledBy(0.5.ak)))
+        setAudioOutput(mixer.scaledBy(0.5.ak))
+        
     }
 }
