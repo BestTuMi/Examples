@@ -20,11 +20,8 @@ class ToneGenerator: AKInstrument {
 
         // Note Properties
         let note = ToneGeneratorNote()
-        addNoteProperty(note.frequency)
-        addNoteProperty(note.amplitude)
         
         let adsr = AKLinearADSREnvelope()
-        connect(adsr)
     
         let fmOscillator = AKFMOscillator()
         fmOscillator.baseFrequency = note.frequency
@@ -32,7 +29,6 @@ class ToneGenerator: AKInstrument {
         fmOscillator.modulatingMultiplier = toneColor.scaledBy(12.ak)
         fmOscillator.modulationIndex = toneColor.scaledBy(15.ak)
         fmOscillator.amplitude = adsr.scaledBy(0.15.ak)
-        connect(fmOscillator)
         
         auxilliaryOutput = AKAudio.globalParameter()
         assignOutput(auxilliaryOutput, to: fmOscillator)

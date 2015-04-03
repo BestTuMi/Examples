@@ -24,21 +24,18 @@ class EffectsProcessor: AKInstrument {
             feedback: feedbackLevel,
             cutoffFrequency: 4000.ak
         )
-        connect(reverb)
         
         let leftMix = AKMix(
             input1: reverb.leftOutput,
             input2: audioSource,
             balance: 0.5.ak
         )
-        connect(leftMix)
 
         let rightMix = AKMix(
             input1: reverb.rightOutput,
             input2: audioSource,
             balance: 0.5.ak
         )
-        connect(rightMix)
         
         connect(AKAudioOutput(leftAudio: leftMix, rightAudio: rightMix))
             
