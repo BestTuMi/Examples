@@ -15,26 +15,20 @@
     if (self) {
         // NOTE BASED CONTROL ==================================================
         SeqInstrumentNote *note = [[SeqInstrumentNote alloc] init];
-        [self addNoteProperty:note.frequency];
         
         // INSTRUMENT CONTROL ==================================================
-        _modulation  = [[AKInstrumentProperty alloc] initWithValue:1.0
-                                                           minimum:0.5
-                                                           maximum:2.0];
-        [self addProperty:_modulation];
+        _modulation = [self createPropertyWithValue:1.0 minimum:0.5 maximum:2.0];
         
-        // INSTRUMENT DEFINITION ===============================================        
+        // INSTRUMENT DEFINITION ===============================================
         AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
         fmOscillator.baseFrequency = note.frequency;
         fmOscillator.carrierMultiplier.value = 2;
         fmOscillator.modulatingMultiplier = _modulation;
         fmOscillator.modulationIndex.value = 15;
         fmOscillator.amplitude.value = 0.2;
-        [self connect:fmOscillator];
         
         // AUDIO OUTPUT ========================================================
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
-        [self connect:audio];
+        [self setAudioOutput:fmOscillator];
     }
     return self;
 }
@@ -51,10 +45,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _frequency = [[AKNoteProperty alloc] initWithValue:220
-                                                   minimum:110
-                                                   maximum:880];
-        [self addProperty:_frequency];
+        _frequency = [self createPropertyWithValue:220 minimum:110 maximum:880];
     }
     return self;
 }
@@ -66,7 +57,5 @@
     }
     return self;
 }
-
-
 
 @end

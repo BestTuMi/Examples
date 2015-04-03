@@ -20,9 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
     
-    [[AKManager sharedManager] setIsLogging:YES];
      conductor = [[SequencesConductor alloc] init];
 }
 
