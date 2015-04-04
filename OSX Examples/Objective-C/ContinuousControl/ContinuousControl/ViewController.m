@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AKTools.h"
 #import "AKPropertySlider.h"
+#import "AKPropertyLabel.h"
 #import "ContinuousControlConductor.h"
 @interface ViewController ()
 
@@ -19,9 +20,9 @@
     IBOutlet AKPropertySlider *amplitudeSlider;
     IBOutlet AKPropertySlider *modulationSlider;
     IBOutlet AKPropertySlider *modIndexSlider;
-    IBOutlet NSTextField *amplitudeLabel;
-    IBOutlet NSTextField *modulationLabel;
-    IBOutlet NSTextField *modIndexLabel;
+    IBOutlet AKPropertyLabel *amplitudeLabel;
+    IBOutlet AKPropertyLabel *modulationLabel;
+    IBOutlet AKPropertyLabel *modIndexLabel;
     
     ContinuousControlConductor *conductor;
 }
@@ -32,16 +33,13 @@
     
     conductor = [[ContinuousControlConductor alloc] init];
     
-    [AKTools setTextField:amplitudeLabel  withProperty:conductor.tweakableInstrument.amplitude];
-    [AKTools setTextField:modulationLabel withProperty:conductor.tweakableInstrument.modulation];
-    [AKTools setTextField:modIndexLabel   withProperty:conductor.tweakableInstrument.modIndex];
+    amplitudeLabel.property  = conductor.tweakableInstrument.amplitude;
+    modulationLabel.property = conductor.tweakableInstrument.modulation;
+    modIndexLabel.property   = conductor.tweakableInstrument.modIndex;
     
     amplitudeSlider.property  = conductor.tweakableInstrument.amplitude;
     modulationSlider.property = conductor.tweakableInstrument.modulation;
     modIndexSlider.property   = conductor.tweakableInstrument.modIndex;
-//    [AKTools setSlider:amplitudeSlider  withProperty:conductor.tweakableInstrument.amplitude];
-//    [AKTools setSlider:modulationSlider withProperty:conductor.tweakableInstrument.modulation];
-//    [AKTools setSlider:modIndexSlider   withProperty:conductor.tweakableInstrument.modIndex];
     
     [conductor.tweakableInstrument.modIndex addObserver:self
                                              forKeyPath:@"value"
