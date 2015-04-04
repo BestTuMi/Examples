@@ -13,14 +13,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // NOTE BASED CONTROL ==================================================
-        ToneGeneratorNote *note = [[ToneGeneratorNote alloc] init];
         
-        // INSTRUMENT CONTROL ==================================================
-        _toneColor  = [[AKInstrumentProperty alloc] initWithValue:0.5
-                                                          minimum:0.1
-                                                          maximum:1.0];
-    
+        ToneGeneratorNote *note = [[ToneGeneratorNote alloc] init];
+        _toneColor  = [self createPropertyWithValue:0.5 minimum:0.1 maximum:1.0];
         
         // INSTRUMENT DEFINITION ===============================================
         
@@ -53,8 +48,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _frequency = [[AKNoteProperty alloc] initWithMinimum:440 maximum:880];
-        _amplitude = [[AKNoteProperty alloc] initWithMinimum:0 maximum:1];
+        _frequency = [self createPropertyWithValue:440 minimum:440 maximum:880];
+        _amplitude = [self createPropertyWithValue:0 minimum:0 maximum:1];
         _amplitude.value = 1.0;
     }
     return self;

@@ -16,9 +16,7 @@
     if (self) {
         
         // INSTRUMENT CONTROL ==================================================
-        _reverb  = [[AKInstrumentProperty alloc] initWithValue:0.0
-                                                       minimum:0.0
-                                                       maximum:1.0];
+        _reverb  = [self createPropertyWithValue:0.0 minimum:0.0 maximum:1.0];
         
         // INSTRUMENT DEFINITION ===============================================
         
@@ -27,16 +25,17 @@
         
         AKMix *leftMix = [[AKMix alloc] initWithInput1:reverb.leftOutput
                                                 input2:audioSource
-                                                balance:akp(0.5)];
+                                               balance:akp(0.5)];
         
         AKMix *rightMix = [[AKMix alloc] initWithInput1:reverb.rightOutput
                                                  input2:audioSource
-                                                 balance:akp(0.5)];
+                                                balance:akp(0.5)];
         
         // AUDIO OUTPUT ========================================================
         
         AKAudioOutput *audio;
         audio = [[AKAudioOutput alloc] initWithLeftAudio:leftMix rightAudio:rightMix];
+        [self connect:audio];
         
         // RESET INPUTS ========================================================
         [self resetParameter:audioSource];
