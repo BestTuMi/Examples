@@ -18,10 +18,10 @@
 {
     IBOutlet AKPropertySlider *amplitudeSlider;
     IBOutlet AKPropertySlider *modulationSlider;
-    IBOutlet UISlider *modIndexSlider;
+    IBOutlet AKPropertySlider *modIndexSlider;
     IBOutlet AKPropertyLabel *amplitudeLabel;
     IBOutlet AKPropertyLabel *modulationLabel;
-    IBOutlet UILabel *modIndexLabel;
+    IBOutlet AKPropertyLabel *modIndexLabel;
     IBOutlet AKAudioOutputPlot *plot;
     
     ContinuousControlConductor *conductor;
@@ -32,16 +32,10 @@
     [super viewDidLoad];
     
     conductor = [[ContinuousControlConductor alloc] init];
-    amplitudeSlider.property = conductor.tweakableInstrument.amplitude;
-    amplitudeLabel.property  = conductor.tweakableInstrument.amplitude;
     
-    modulationSlider.property = conductor.tweakableInstrument.modulation;
-    modulationLabel.property  = conductor.tweakableInstrument.modulation;
-    
-    [conductor.tweakableInstrument.modIndex addObserver:self
-                                    forKeyPath:@"value"
-                                       options:NSKeyValueObservingOptionNew
-                                       context:Nil];
+    amplitudeSlider.property  = amplitudeLabel.property  = conductor.tweakableInstrument.amplitude;
+    modulationSlider.property = modulationLabel.property = conductor.tweakableInstrument.modulation;
+    modIndexSlider.property   = modIndexLabel.property   = conductor.tweakableInstrument.modIndex;
     
     [AKManager addBinding:plot];
 }
@@ -56,20 +50,6 @@
 
 - (IBAction)stopInstrument:(id)sender {
     [conductor stop];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-    if ([keyPath isEqualToString:@"value"]) {
-        [AKTools setSlider:modIndexSlider withProperty:conductor.tweakableInstrument.modIndex];
-        [AKTools setLabel:modIndexLabel   withProperty:conductor.tweakableInstrument.modIndex];
-    } else {
-        [NSException raise:@"Unexpected Keypath" format:@"%@", keyPath];
-    }
-    
 }
 
 @end
