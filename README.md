@@ -1,5 +1,7 @@
 # AudioKit Example Projects
 
+[![Build Status](https://travis-ci.org/audiokit/Examples.svg?branch=master)](https://travis-ci.org/audiokit/Examples)
+
 This is a collection of projects built using the [AudioKit](http://audiokit.io/) synthesis, processing, and analysis framework.  More information about these examples, including demonstration movies, can be found at the [AudioKit Examples page](http://audiokit.io/examples/).
 
 Examples
