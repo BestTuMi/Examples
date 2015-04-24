@@ -53,7 +53,7 @@ class GranularSynth: AKInstrument
         addProperty(frequencyVariation)
         addProperty(frequencyVariationDistribution)
         
-        let file = String (NSBundle.mainBundle().pathForResource("PianoBassDrumLoop", ofType: "wav")!)
+        let file = AKManager.pathToSoundFile("PianoBassDrumLoop", ofType: "wav")
         
         let soundFile = AKSoundFileTable(filename: file, size: 16384)
         
@@ -66,7 +66,7 @@ class GranularSynth: AKInstrument
         synth.frequencyVariation = frequencyVariation
         synth.frequencyVariationDistribution = frequencyVariationDistribution
         
-        let file2 = String (NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
+        let file2 = AKManager.pathToSoundFile("808loop", ofType: "wav")
         
         let soundFile2 = AKSoundFileTable(filename: file2, size:16384)
         

@@ -17,7 +17,7 @@ class ConvolutionInstrument: AKInstrument
     override init() {
         super.init()
         
-        let file = String(NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
+        let file = AKManager.pathToSoundFile("808loop", ofType: "wav")
         let loop = AKFileInput(filename: file)
         
         let dish = String(NSBundle.mainBundle().pathForResource("dish",      ofType: "wav")!)

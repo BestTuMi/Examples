@@ -35,11 +35,11 @@ class ViewController: NSViewController {
         conv.stop()
     }
     
-    @IBAction func changeDryWet(sender: AnyObject) {
-        AKTools.setProperty(conv.dryWetBalance, withSlider: sender as NSSlider)
+    @IBAction func changeDryWet(sender: NSSlider) {
+        AKTools.setProperty(conv.dryWetBalance, withSlider: sender)
     }
     
-    @IBAction func changeDishWell(sender: AnyObject) {
-        AKTools.setProperty(conv.dishWellBalance, withSlider: sender as NSSlider)
+    @IBAction func changeDishWell(sender: NSSlider) {
+        AKTools.setProperty(conv.dishWellBalance, withSlider: sender)
     }
 }
