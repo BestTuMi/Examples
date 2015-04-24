@@ -26,8 +26,8 @@
 
         // INSTRUMENT DEFINITION ===============================================
         
-        NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop"
-                                                         ofType:@"wav"];
+        
+        NSString *file = [AKManager pathToSoundFile:@"PianoBassDrumLoop" ofType:@"wav"];
         AKSoundFileTable *soundFile;
         soundFile = [[AKSoundFileTable alloc] initWithFilename:file size:16384];
         
@@ -39,8 +39,7 @@
         synth.frequencyVariation = _frequencyVariation;
         synth.frequencyVariationDistribution = _frequencyDistribution;
         
-        NSString *file2 = [[NSBundle mainBundle] pathForResource:@"808loop"
-                                                         ofType:@"wav"];
+        NSString *file2 = [AKManager pathToSoundFile:@"808loop" ofType:@"wav"];
         AKSoundFileTable *soundFile2;
         soundFile2 = [[AKSoundFileTable alloc] initWithFilename:file2 size:16384];
         

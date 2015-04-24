@@ -11,7 +11,6 @@
 #import "ConvolutionInstrument.h"
 #import "AKAudioAnalyzer.h"
 
-#import "AKPropertySlider.h"
 #import "AKAudioOutputPlot.h"
 
 @implementation ViewController

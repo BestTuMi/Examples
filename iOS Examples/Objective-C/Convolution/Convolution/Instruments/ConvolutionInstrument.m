@@ -21,9 +21,9 @@
         
         // INSTRUMENT DEFINITION ===============================================
         
-        NSString *file;
-        file = [[NSBundle mainBundle] pathForResource:@"808loop" ofType:@"wav"];
+        NSString *file = [AKManager pathToSoundFile:@"808loop" ofType:@"wav"];
         AKFileInput *loop = [[AKFileInput alloc] initWithFilename:file];
+        [loop setLoop:YES];
         
         NSString *dish = [[NSBundle mainBundle] pathForResource:@"dish" ofType:@"wav"];
         NSString *well = [[NSBundle mainBundle] pathForResource:@"Stairwell" ofType:@"wav"];

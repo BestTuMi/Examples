@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AKPropertySlider.h"
-#import "AKPropertyLabel.h"
 #import "AKAudioOutputPlot.h"
 
 #import "AKTools.h"
