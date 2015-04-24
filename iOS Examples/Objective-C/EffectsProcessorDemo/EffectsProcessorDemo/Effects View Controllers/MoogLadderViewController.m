@@ -8,7 +8,6 @@
 
 #import "MoogLadderViewController.h"
 #import "SharedStore.h"
-#import "AKPropertySlider.h"
 
 @implementation MoogLadderViewController {
     IBOutlet AKPropertySlider *cutoffFrequencySlider;

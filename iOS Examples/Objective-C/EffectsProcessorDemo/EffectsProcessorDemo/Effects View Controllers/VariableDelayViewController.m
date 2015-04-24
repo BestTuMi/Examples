@@ -8,7 +8,6 @@
 
 #import "VariableDelayViewController.h"
 #import "SharedStore.h"
-#import "AKPropertySlider.h"
 
 @implementation VariableDelayViewController {
     IBOutlet AKPropertySlider *delayTimeSlider;
@@ -18,7 +17,7 @@
 - (void)viewDidLoad
 {
     SharedStore *global = [SharedStore globals];
-    
+
     delayTimeSlider.property = global.variableDelay.delayTime;
     mixSlider.property       = global.variableDelay.mix;
 }

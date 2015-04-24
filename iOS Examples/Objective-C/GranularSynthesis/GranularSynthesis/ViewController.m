@@ -10,7 +10,6 @@
 
 #import "AKFoundation.h"
 #import "GranularInstrument.h"
-#import "AKPropertySlider.h"
 
 
 @interface ViewController ()
@@ -33,10 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     granularInstrument = [[GranularInstrument alloc] init];
     [AKOrchestra addInstrument:granularInstrument];
-    
+
     _mixSlider.property       = granularInstrument.mix;
     _frequencySlider.property = granularInstrument.frequency;
     _durationSlider.property  = granularInstrument.duration;

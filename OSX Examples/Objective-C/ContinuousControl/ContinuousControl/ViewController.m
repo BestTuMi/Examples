@@ -8,9 +8,8 @@
 
 #import "ViewController.h"
 #import "AKTools.h"
-#import "AKPropertySlider.h"
-#import "AKPropertyLabel.h"
 #import "ContinuousControlConductor.h"
+
 @interface ViewController ()
 
 @end
@@ -23,15 +22,15 @@
     IBOutlet AKPropertyLabel *amplitudeLabel;
     IBOutlet AKPropertyLabel *modulationLabel;
     IBOutlet AKPropertyLabel *modIndexLabel;
-    
+
     ContinuousControlConductor *conductor;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     conductor = [[ContinuousControlConductor alloc] init];
-    
+
     amplitudeSlider.property  = amplitudeLabel.property  = conductor.tweakableInstrument.amplitude;
     modulationSlider.property = modulationLabel.property = conductor.tweakableInstrument.modulation;
     modIndexSlider.property   = modIndexLabel.property   = conductor.tweakableInstrument.modIndex;

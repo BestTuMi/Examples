@@ -8,7 +8,6 @@
 
 #import "ReverbViewController.h"
 #import "SharedStore.h"
-#import "AKPropertySlider.h"
 
 @implementation ReverbViewController {
     IBOutlet AKPropertySlider *feedbackSlider;
