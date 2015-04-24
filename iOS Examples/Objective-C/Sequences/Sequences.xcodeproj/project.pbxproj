@@ -363,7 +363,6 @@
 				INFOPLIST_FILE = "Sequences/Sequences-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKitV2.0/Platforms/iOS/libs\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,7 +383,6 @@
 				INFOPLIST_FILE = "Sequences/Sequences-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../AudioKitV2.0/Platforms/iOS/libs\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

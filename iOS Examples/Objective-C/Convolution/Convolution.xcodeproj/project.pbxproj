@@ -375,7 +375,7 @@
 				GCC_PREFIX_HEADER = "Convolution/Convolution-Prefix.pch";
 				INFOPLIST_FILE = "Convolution/Convolution-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKitV2.0/Platforms/iOS/libs\"";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,7 +393,7 @@
 				GCC_PREFIX_HEADER = "Convolution/Convolution-Prefix.pch";
 				INFOPLIST_FILE = "Convolution/Convolution-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../AudioKitV2.0/Platforms/iOS/libs\"";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
