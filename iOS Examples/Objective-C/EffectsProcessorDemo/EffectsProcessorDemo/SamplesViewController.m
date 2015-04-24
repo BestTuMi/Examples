@@ -19,7 +19,6 @@
 
 @implementation SamplesViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     startTime = 0;
@@ -47,19 +46,15 @@
     [global.moogLadder play];
     [global.reverb play];
     [global.audioFilePlayer playNote:playback];
-    
 }
 
-
 - (IBAction)playFirstSample:(id)sender {
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop" ofType:@"wav"];
+    NSString *file = [AKManager pathToSoundFile:@"PianoBassDrumLoop" ofType:@"wav"];
     [self playFile:file];
 }
 
-
-
 - (IBAction)playSecondSample:(id)sender {
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"808loop" ofType:@"wav"];
+    NSString *file = [AKManager pathToSoundFile:@"808loop" ofType:@"wav"];
     [self playFile:file];
 }
 
