@@ -27,7 +27,7 @@
 - (void)playFile:(NSString *)file{
     SharedStore *global = [SharedStore globals];
 
-    [[AKManager sharedManager] stop];
+    [[global audioFilePlayer] stop];
     [AKOrchestra reset];
     
     // Create the orchestra and instruments

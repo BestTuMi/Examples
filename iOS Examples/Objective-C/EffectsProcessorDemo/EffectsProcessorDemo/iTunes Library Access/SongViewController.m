@@ -28,7 +28,7 @@
     if ([[song  valueForProperty:MPMediaItemPropertyPersistentID] integerValue] !=
         [[global.currentSong valueForProperty:MPMediaItemPropertyPersistentID] integerValue])
     {
-        [[AKManager sharedManager] stop];
+        [[global audioFilePlayer] stop];
         global.isPlaying = NO;
         _song = song;
         global.currentSong = song;

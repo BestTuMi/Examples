@@ -28,6 +28,7 @@
         
         AKFileInput *fileIn = [[AKFileInput alloc] initWithFilename:filename];
         fileIn.startTime = note.startTime;
+        fileIn.loop = YES;
         
         // Output to global effects processing
         _auxilliaryOutput = [AKStereoAudio globalParameter];
