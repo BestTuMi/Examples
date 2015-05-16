@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="In0-fD-bxs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XFa-Gz-iUf">
+            <objects>
+                <viewController id="In0-fD-bxs" customClass="ViewController" customModule="TableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5WO-Vg-Soe"/>
+                        <viewControllerLayoutGuide type="bottom" id="LLc-AA-Wf7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="McH-ln-gdz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdR-Q0-S5L">
+                                <rect key="frame" x="16" y="20" width="568" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="pe7-ne-wXN"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="In0-fD-bxs" eventType="touchUpInside" id="vjz-Pa-4CJ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="TsY-Te-rQe">
+                                <rect key="frame" x="16" y="84" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Sawtooth"/>
+                                    <segment title="Sine"/>
+                                    <segment title="Square"/>
+                                    <segment title="Triangle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeWaveform:" destination="In0-fD-bxs" eventType="valueChanged" id="vgG-lV-Q25"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-NP-q2q" customClass="AKAudioOutputPlot">
+                                <rect key="frame" x="16" y="396" width="568" height="184"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" red="0.0" green="1" blue="0.17060597180000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="piv-iy-9CZ" customClass="AKPropertySlider">
+                                <rect key="frame" x="14" y="147" width="572" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFv-iw-VaB">
+                                <rect key="frame" x="16" y="132" width="77" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBF-E7-SaC" customClass="AKPropertyLabel">
+                                <rect key="frame" x="574" y="131" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-1C-wkc" customClass="AKTablePlot">
+                                <rect key="frame" x="16" y="191" width="568" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hxu-NP-q2q" firstAttribute="top" secondItem="TsY-Te-rQe" secondAttribute="bottom" constant="19" id="2Vd-Hz-l8w"/>
+                            <constraint firstItem="TLm-1C-wkc" firstAttribute="height" secondItem="Hxu-NP-q2q" secondAttribute="height" id="6hN-yF-dqe"/>
+                            <constraint firstItem="YFv-iw-VaB" firstAttribute="top" secondItem="TsY-Te-rQe" secondAttribute="bottom" constant="20" id="Ax4-OM-Po6"/>
+                            <constraint firstItem="piv-iy-9CZ" firstAttribute="top" secondItem="YFv-iw-VaB" secondAttribute="bottom" constant="-5" id="DCs-JS-Jeg"/>
+                            <constraint firstItem="LLc-AA-Wf7" firstAttribute="top" secondItem="Hxu-NP-q2q" secondAttribute="bottom" constant="20" id="MJy-Sf-O5w"/>
+                            <constraint firstItem="TLm-1C-wkc" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="NQ5-Eu-EA3"/>
+                            <constraint firstItem="piv-iy-9CZ" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="Sml-T1-S0x"/>
+                            <constraint firstItem="TLm-1C-wkc" firstAttribute="top" secondItem="piv-iy-9CZ" secondAttribute="bottom" constant="14" id="T89-7y-C4t"/>
+                            <constraint firstItem="TLm-1C-wkc" firstAttribute="top" secondItem="TsY-Te-rQe" secondAttribute="bottom" constant="20" id="TY8-Ie-NXu"/>
+                            <constraint firstItem="Hxu-NP-q2q" firstAttribute="top" secondItem="TLm-1C-wkc" secondAttribute="bottom" constant="20" id="Vkg-U3-tQV"/>
+                            <constraint firstItem="rBF-E7-SaC" firstAttribute="centerY" secondItem="YFv-iw-VaB" secondAttribute="centerY" id="Ydr-g5-lx5"/>
+                            <constraint firstItem="TLm-1C-wkc" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="Z8I-9A-ufo"/>
+                            <constraint firstItem="rBF-E7-SaC" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="cO1-0b-7gl"/>
+                            <constraint firstItem="piv-iy-9CZ" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="eCq-5v-T5i"/>
+                            <constraint firstItem="IdR-Q0-S5L" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="eNQ-AH-AL6"/>
+                            <constraint firstItem="TsY-Te-rQe" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="eeb-vd-pQR"/>
+                            <constraint firstItem="TsY-Te-rQe" firstAttribute="top" secondItem="IdR-Q0-S5L" secondAttribute="bottom" constant="8" id="enj-6t-fIr"/>
+                            <constraint firstItem="YFv-iw-VaB" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="g7i-7J-JaV"/>
+                            <constraint firstItem="IdR-Q0-S5L" firstAttribute="top" secondItem="5WO-Vg-Soe" secondAttribute="bottom" id="glw-0z-kz4"/>
+                            <constraint firstItem="Hxu-NP-q2q" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="tD2-6j-DK0"/>
+                            <constraint firstItem="Hxu-NP-q2q" firstAttribute="trailing" secondItem="McH-ln-gdz" secondAttribute="trailingMargin" id="v5z-Eb-HQP"/>
+                            <constraint firstItem="TsY-Te-rQe" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="ve3-Mp-LeE"/>
+                            <constraint firstItem="IdR-Q0-S5L" firstAttribute="leading" secondItem="McH-ln-gdz" secondAttribute="leadingMargin" id="ymF-co-OCd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TY8-Ie-NXu"/>
+                                <exclude reference="2Vd-Hz-l8w"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="choices" destination="TsY-Te-rQe" id="c2G-Gz-TFh"/>
+                        <outlet property="frequencyLabel" destination="rBF-E7-SaC" id="q2M-Zn-QRP"/>
+                        <outlet property="frequencySlider" destination="piv-iy-9CZ" id="Pbd-v4-24z"/>
+                        <outlet property="tablePlot" destination="TLm-1C-wkc" id="xDj-2s-iCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXS-6S-VEa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="379"/>
+        </scene>
+    </scenes>
+</document>
