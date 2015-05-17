@@ -17,6 +17,7 @@ script:
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Sequences/Sequences.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TableDemo/TableDemo.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TouchRegions/TouchRegions.xcodeproj                 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/ContinuousControl/ContinuousControl.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Convolution/Convolution.xcodeproj                         -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/FMOscillator/FMOscillator.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/GranularSynthesis/GranularSynthesis.xcodeproj             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
