@@ -7,28 +7,30 @@ This is a collection of projects built using the [AudioKit](http://audiokit.io/)
 Examples
 =======
 
-There are examples for iOS and OSX in both Objective-C and Swift as noted below:
+There are examples for iOS and OSX in both Objective-C and Swift except as noted below:
 
 iOS Examples
 ------------
+* Binaural Audio (Objective-C)
 * Continuous Control
-* Convolution (Objective-C, Swift)
-* Effects Processor Demo
+* Convolution
+* Effects Processor Demo (Objective-C)
 * FM Oscillator (Swift)
-* Granular Synthesis (Objective-C, Swift)
-* Harmonizer (Objective-C, Swift)
-* Keyboard (Objective-C, Swift)
-* Play Audio File
+* Granular Synthesis
+* Harmonizer
+* Keyboard
+* Play Audio File (Objective-C)
 * Sequences
-* Touch Regions
+* Table Demo
+* Touch Regions (Objective-C)
 
 
 OSX Examples
 ------------
-* Continuous Control
-* Convolution (Objective-C, Swift)
-* Play Audio File
-* Sequences
+* Continuous Control (Objective-C)
+* Convolution
+* Play Audio File (Objective-C)
+* Sequences (Objective-C)
 
 User Contributions
 ----------------------
