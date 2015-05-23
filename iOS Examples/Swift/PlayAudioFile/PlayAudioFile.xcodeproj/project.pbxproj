@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94B9562E1B0A82E1005CD8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9562D1B0A82E1005CD8AC /* AppDelegate.swift */; };
+		94B956301B0A82E1005CD8AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9562F1B0A82E1005CD8AC /* ViewController.swift */; };
+		94B956331B0A82E1005CD8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B956311B0A82E1005CD8AC /* Main.storyboard */; };
+		94B956351B0A82E1005CD8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B956341B0A82E1005CD8AC /* Images.xcassets */; };
+		94B956381B0A82E1005CD8AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B956361B0A82E1005CD8AC /* LaunchScreen.xib */; };
+		94B9565B1B0A831F005CD8AC /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B956541B0A830F005CD8AC /* libAudioKit iOS Static.a */; };
+		94B9565D1B0A8370005CD8AC /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9565C1B0A8370005CD8AC /* AudioKit.swift */; };
+		94B956631B0A846B005CD8AC /* AudioFilePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B956621B0A846B005CD8AC /* AudioFilePlayer.swift */; };
+		94B9566A1B0A8912005CD8AC /* blaster.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 94B956691B0A8912005CD8AC /* blaster.aiff */; };
+		94B9566C1B0A8943005CD8AC /* raygun.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B9566B1B0A8943005CD8AC /* raygun.png */; };
+		94B956731B0A8C5E005CD8AC /* AudioFileConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B956721B0A8C5E005CD8AC /* AudioFileConductor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94B956531B0A830F005CD8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
+			remoteInfo = "AudioKit iOS Static";
+		};
+		94B956551B0A830F005CD8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
+			remoteInfo = "AudioKit iOS Dynamic";
+		};
+		94B956571B0A830F005CD8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
+			remoteInfo = "AudioKit OS X";
+		};
+		94B956591B0A8319005CD8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA8E93D71AD3C5240057E979;
+			remoteInfo = "AudioKit iOS Static";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94B956281B0A82E1005CD8AC /* PlayAudioFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAudioFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B9562C1B0A82E1005CD8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B9562D1B0A82E1005CD8AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94B9562F1B0A82E1005CD8AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94B956321B0A82E1005CD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94B956341B0A82E1005CD8AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		94B956371B0A82E1005CD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKitV2.1/AudioKit.xcodeproj; sourceTree = "<group>"; };
+		94B9565C1B0A8370005CD8AC /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioKit.swift; path = ../../../../AudioKitV2.1/AudioKit/Platforms/Swift/AudioKit.swift; sourceTree = "<group>"; };
+		94B9565E1B0A837D005CD8AC /* PlayAudioFile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayAudioFile-Bridging-Header.h"; sourceTree = "<group>"; };
+		94B956621B0A846B005CD8AC /* AudioFilePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFilePlayer.swift; sourceTree = "<group>"; };
+		94B956691B0A8912005CD8AC /* blaster.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = blaster.aiff; sourceTree = "<group>"; };
+		94B9566B1B0A8943005CD8AC /* raygun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raygun.png; sourceTree = "<group>"; };
+		94B956721B0A8C5E005CD8AC /* AudioFileConductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileConductor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94B956251B0A82E1005CD8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B9565B1B0A831F005CD8AC /* libAudioKit iOS Static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94B9561F1B0A82E1005CD8AC = {
+			isa = PBXGroup;
+			children = (
+				94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */,
+				94B9562A1B0A82E1005CD8AC /* PlayAudioFile */,
+				94B956291B0A82E1005CD8AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94B956291B0A82E1005CD8AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94B956281B0A82E1005CD8AC /* PlayAudioFile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94B9562A1B0A82E1005CD8AC /* PlayAudioFile */ = {
+			isa = PBXGroup;
+			children = (
+				94B956721B0A8C5E005CD8AC /* AudioFileConductor.swift */,
+				94B956681B0A8900005CD8AC /* Audio Files */,
+				94B956641B0A8477005CD8AC /* Instruments */,
+				94B9562D1B0A82E1005CD8AC /* AppDelegate.swift */,
+				94B9562F1B0A82E1005CD8AC /* ViewController.swift */,
+				94B956311B0A82E1005CD8AC /* Main.storyboard */,
+				94B956341B0A82E1005CD8AC /* Images.xcassets */,
+				94B9562B1B0A82E1005CD8AC /* Supporting Files */,
+			);
+			path = PlayAudioFile;
+			sourceTree = "<group>";
+		};
+		94B9562B1B0A82E1005CD8AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94B9565E1B0A837D005CD8AC /* PlayAudioFile-Bridging-Header.h */,
+				94B9566B1B0A8943005CD8AC /* raygun.png */,
+				94B9565C1B0A8370005CD8AC /* AudioKit.swift */,
+				94B956361B0A82E1005CD8AC /* LaunchScreen.xib */,
+				94B9562C1B0A82E1005CD8AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94B9564E1B0A830E005CD8AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94B956541B0A830F005CD8AC /* libAudioKit iOS Static.a */,
+				94B956561B0A830F005CD8AC /* libAudioKit iOS Dynamic.a */,
+				94B956581B0A830F005CD8AC /* libAudioKit OS X.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94B956641B0A8477005CD8AC /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				94B956621B0A846B005CD8AC /* AudioFilePlayer.swift */,
+			);
+			name = Instruments;
+			sourceTree = "<group>";
+		};
+		94B956681B0A8900005CD8AC /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				94B956691B0A8912005CD8AC /* blaster.aiff */,
+			);
+			name = "Audio Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94B956271B0A82E1005CD8AC /* PlayAudioFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B956471B0A82E1005CD8AC /* Build configuration list for PBXNativeTarget "PlayAudioFile" */;
+			buildPhases = (
+				94B956241B0A82E1005CD8AC /* Sources */,
+				94B956251B0A82E1005CD8AC /* Frameworks */,
+				94B956261B0A82E1005CD8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94B9565A1B0A8319005CD8AC /* PBXTargetDependency */,
+			);
+			name = PlayAudioFile;
+			productName = PlayAudioFile;
+			productReference = 94B956281B0A82E1005CD8AC /* PlayAudioFile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94B956201B0A82E1005CD8AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = audiokit.io;
+				TargetAttributes = {
+					94B956271B0A82E1005CD8AC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 94B956231B0A82E1005CD8AC /* Build configuration list for PBXProject "PlayAudioFile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94B9561F1B0A82E1005CD8AC;
+			productRefGroup = 94B956291B0A82E1005CD8AC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 94B9564E1B0A830E005CD8AC /* Products */;
+					ProjectRef = 94B9564D1B0A830E005CD8AC /* AudioKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				94B956271B0A82E1005CD8AC /* PlayAudioFile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		94B956541B0A830F005CD8AC /* libAudioKit iOS Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Static.a";
+			remoteRef = 94B956531B0A830F005CD8AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B956561B0A830F005CD8AC /* libAudioKit iOS Dynamic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Dynamic.a";
+			remoteRef = 94B956551B0A830F005CD8AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B956581B0A830F005CD8AC /* libAudioKit OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit OS X.a";
+			remoteRef = 94B956571B0A830F005CD8AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94B956261B0A82E1005CD8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B956331B0A82E1005CD8AC /* Main.storyboard in Resources */,
+				94B9566A1B0A8912005CD8AC /* blaster.aiff in Resources */,
+				94B956381B0A82E1005CD8AC /* LaunchScreen.xib in Resources */,
+				94B956351B0A82E1005CD8AC /* Images.xcassets in Resources */,
+				94B9566C1B0A8943005CD8AC /* raygun.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94B956241B0A82E1005CD8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B9565D1B0A8370005CD8AC /* AudioKit.swift in Sources */,
+				94B956301B0A82E1005CD8AC /* ViewController.swift in Sources */,
+				94B9562E1B0A82E1005CD8AC /* AppDelegate.swift in Sources */,
+				94B956731B0A8C5E005CD8AC /* AudioFileConductor.swift in Sources */,
+				94B956631B0A846B005CD8AC /* AudioFilePlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94B9565A1B0A8319005CD8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AudioKit iOS Static";
+			targetProxy = 94B956591B0A8319005CD8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94B956311B0A82E1005CD8AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94B956321B0A82E1005CD8AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94B956361B0A82E1005CD8AC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94B956371B0A82E1005CD8AC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94B956451B0A82E1005CD8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94B956461B0A82E1005CD8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94B956481B0A82E1005CD8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PlayAudioFile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayAudioFile/PlayAudioFile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKItV2.1/AudioKit/**";
+			};
+			name = Debug;
+		};
+		94B956491B0A82E1005CD8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PlayAudioFile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayAudioFile/PlayAudioFile-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKItV2.1/AudioKit/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94B956231B0A82E1005CD8AC /* Build configuration list for PBXProject "PlayAudioFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B956451B0A82E1005CD8AC /* Debug */,
+				94B956461B0A82E1005CD8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B956471B0A82E1005CD8AC /* Build configuration list for PBXNativeTarget "PlayAudioFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B956481B0A82E1005CD8AC /* Debug */,
+				94B956491B0A82E1005CD8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94B956201B0A82E1005CD8AC /* Project object */;
+}
