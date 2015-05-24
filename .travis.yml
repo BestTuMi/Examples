@@ -26,4 +26,4 @@ script:
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/PlayAudioFile/PlayAudioFile.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Sequences/Sequences.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TableDemo/TableDemo.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TouchRegions/TouchRegions.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+#- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TouchRegions/TouchRegions.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
