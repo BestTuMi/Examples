@@ -111,9 +111,9 @@ class SongViewController: UIViewController {
         
         isReadyToPlay = false
         
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, false)
-        let documentsDirectory = paths[0] as! String
-        exportPath = String(format: "%@/exported.wav", documentsDirectory)
+        let docDirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let docDir = docDirs[0] as! String
+        exportPath = docDir.stringByAppendingPathComponent("exported").stringByAppendingPathExtension("wav")!
     
         let url = song.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
         let songAsset = AVURLAsset(URL: url, options: nil)
