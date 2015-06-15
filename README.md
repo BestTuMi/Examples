@@ -11,18 +11,18 @@ There are examples for iOS and OSX in both Objective-C and Swift except as noted
 
 iOS Examples
 ------------
-* Binaural Audio (Objective-C)
+* Binaural Audio
 * Continuous Control
 * Convolution
-* Effects Processor Demo (Objective-C)
-* FM Oscillator (Swift)
+* Effects Processor Demo
+* FM Oscillator (Swift only)
 * Granular Synthesis
 * Harmonizer
 * Keyboard
-* Play Audio File (Objective-C)
+* Play Audio File
 * Sequences
 * Table Demo
-* Touch Regions (Objective-C)
+* Touch Regions
 
 
 OSX Examples
