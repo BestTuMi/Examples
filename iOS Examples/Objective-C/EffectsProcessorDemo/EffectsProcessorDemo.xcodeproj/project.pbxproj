@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43514C31B391C20005DB41D /* RingModulator.m in Sources */ = {isa = PBXBuildFile; fileRef = C43514C21B391C20005DB41D /* RingModulator.m */; };
+		C43514C81B391E68005DB41D /* RingModulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43514C71B391E68005DB41D /* RingModulatorViewController.m */; };
 		C46B27D11A7B037300328AF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B27D01A7B037300328AF3 /* main.m */; };
 		C46B27D41A7B037300328AF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B27D31A7B037300328AF3 /* AppDelegate.m */; };
 		C46B27D71A7B037300328AF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B27D61A7B037300328AF3 /* ViewController.m */; };
@@ -62,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C43514C11B391C20005DB41D /* RingModulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingModulator.h; sourceTree = "<group>"; };
+		C43514C21B391C20005DB41D /* RingModulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingModulator.m; sourceTree = "<group>"; };
+		C43514C61B391E68005DB41D /* RingModulatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingModulatorViewController.h; sourceTree = "<group>"; };
+		C43514C71B391E68005DB41D /* RingModulatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingModulatorViewController.m; sourceTree = "<group>"; };
 		C46B27CB1A7B037300328AF3 /* EffectsProcessorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectsProcessorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46B27CF1A7B037300328AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46B27D01A7B037300328AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 				C46B2A151A7B60CC00328AF3 /* ReverbViewController.m */,
 				C46B2A161A7B60CC00328AF3 /* VariableDelayViewController.h */,
 				C46B2A171A7B60CC00328AF3 /* VariableDelayViewController.m */,
+				C43514C61B391E68005DB41D /* RingModulatorViewController.h */,
+				C43514C71B391E68005DB41D /* RingModulatorViewController.m */,
 			);
 			path = "Effects View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +193,8 @@
 				C46B2A1C1A7B60CC00328AF3 /* MoogLadder.m */,
 				C46B2A1D1A7B60CC00328AF3 /* Reverb.h */,
 				C46B2A1E1A7B60CC00328AF3 /* Reverb.m */,
+				C43514C11B391C20005DB41D /* RingModulator.h */,
+				C43514C21B391C20005DB41D /* RingModulator.m */,
 				C46B2A1F1A7B60CC00328AF3 /* VariableDelay.h */,
 				C46B2A201A7B60CC00328AF3 /* VariableDelay.m */,
 			);
@@ -318,12 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43514C81B391E68005DB41D /* RingModulatorViewController.m in Sources */,
 				C46B2A2B1A7B60CC00328AF3 /* ReverbViewController.m in Sources */,
 				C46B2A301A7B60CC00328AF3 /* VariableDelay.m in Sources */,
 				C46B2A2A1A7B60CC00328AF3 /* MoogLadderViewController.m in Sources */,
 				C46B27D71A7B037300328AF3 /* ViewController.m in Sources */,
 				C46B2A2E1A7B60CC00328AF3 /* MoogLadder.m in Sources */,
 				C46B27D41A7B037300328AF3 /* AppDelegate.m in Sources */,
+				C43514C31B391C20005DB41D /* RingModulator.m in Sources */,
 				C46B2A311A7B60CC00328AF3 /* AlbumsViewController.m in Sources */,
 				C46B2A2F1A7B60CC00328AF3 /* Reverb.m in Sources */,
 				C46B2A341A7B60CC00328AF3 /* SongViewController.m in Sources */,

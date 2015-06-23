@@ -15,6 +15,7 @@
 #import "VariableDelay.h"
 #import "MoogLadder.h"
 #import "Reverb.h"
+#import "RingModulator.h"
 
 @interface SharedStore : NSObject
 
@@ -22,6 +23,7 @@
 @property (nonatomic, retain) Reverb *reverb;
 @property (nonatomic, retain) VariableDelay *variableDelay;
 @property (nonatomic, retain) MoogLadder *moogLadder;
+@property (nonatomic, retain) RingModulator *ringModulator;
 
 @property (nonatomic, strong) MPMediaItem *currentSong;
 @property (nonatomic) BOOL isPlaying;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SvI-PW-Hag">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SvI-PW-Hag">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -301,6 +301,64 @@
             </objects>
             <point key="canvasLocation" x="-28" y="-237"/>
         </scene>
+        <!--Ring Modulator View Controller-->
+        <scene sceneID="5Bj-UK-1uS">
+            <objects>
+                <viewController id="uxf-vC-lQG" customClass="RingModulatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l0i-pj-fq9"/>
+                        <viewControllerLayoutGuide type="bottom" id="PY3-fh-ixl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ya2-ku-2E8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lbg-P3-tOJ" customClass="AKPropertySlider">
+                                <rect key="frame" x="28" y="165" width="544" height="31"/>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-WR-71Q">
+                                <rect key="frame" x="0.0" y="283" width="600" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrier Frequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFw-Ug-8VX">
+                                <rect key="frame" x="183" y="106" width="234" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ngk-VW-TZg" customClass="AKPropertySlider">
+                                <rect key="frame" x="28" y="345" width="544" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="top" secondItem="uFw-Ug-8VX" secondAttribute="bottom" constant="20" id="5T6-2o-jdR"/>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="top" secondItem="uFw-Ug-8VX" secondAttribute="bottom" constant="23" id="GFb-WZ-ScW"/>
+                            <constraint firstAttribute="centerX" secondItem="uFw-Ug-8VX" secondAttribute="centerX" id="Jwc-j1-5io"/>
+                            <constraint firstItem="uFw-Ug-8VX" firstAttribute="top" secondItem="l0i-pj-fq9" secondAttribute="bottom" constant="42" id="NIQ-Ih-5kt"/>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="width" secondItem="ngk-VW-TZg" secondAttribute="width" id="SW5-DQ-lpg"/>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="leading" secondItem="ya2-ku-2E8" secondAttribute="leadingMargin" constant="14" id="Uac-rz-eJG"/>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="centerX" secondItem="uFw-Ug-8VX" secondAttribute="centerX" id="YyX-WG-7Ym"/>
+                            <constraint firstItem="ngk-VW-TZg" firstAttribute="width" secondItem="lbg-P3-tOJ" secondAttribute="width" id="ZFY-hn-dbv"/>
+                            <constraint firstItem="1zm-WR-71Q" firstAttribute="top" secondItem="lbg-P3-tOJ" secondAttribute="bottom" constant="89" id="cFU-D2-wR1"/>
+                            <constraint firstItem="1zm-WR-71Q" firstAttribute="centerX" secondItem="ngk-VW-TZg" secondAttribute="centerX" id="fPt-56-aEa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lbg-P3-tOJ" secondAttribute="trailing" constant="14" id="kAb-su-YW1"/>
+                            <constraint firstItem="ngk-VW-TZg" firstAttribute="top" secondItem="1zm-WR-71Q" secondAttribute="bottom" constant="24" id="mkQ-2m-dT8"/>
+                            <constraint firstItem="1zm-WR-71Q" firstAttribute="top" secondItem="lbg-P3-tOJ" secondAttribute="bottom" constant="88" id="rAw-Qu-Q2y"/>
+                            <constraint firstItem="ngk-VW-TZg" firstAttribute="top" secondItem="1zm-WR-71Q" secondAttribute="bottom" constant="25" id="wik-dT-gGd"/>
+                            <constraint firstItem="lbg-P3-tOJ" firstAttribute="centerX" secondItem="1zm-WR-71Q" secondAttribute="centerX" id="ztV-Qf-YS8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carrierFrequencySlider" destination="lbg-P3-tOJ" id="vj3-D3-ThL"/>
+                        <outlet property="mixSlider" destination="ngk-VW-TZg" id="w0Y-vp-Qaa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvP-jj-4a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-242"/>
+        </scene>
         <!--Moog Ladder-->
         <scene sceneID="5ld-lE-7aH">
             <objects>
@@ -408,7 +466,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-jG-XIN">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-jG-XIN">
                                 <rect key="frame" x="0.0" y="72" width="600" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -420,8 +478,8 @@
                                     <segue destination="1Mu-Dy-lXy" kind="show" id="6ZV-wa-wH7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-us-oMX">
-                                <rect key="frame" x="0.0" y="120" width="600" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-us-oMX">
+                                <rect key="frame" x="0.0" y="167" width="600" height="48"/>
                                 <color key="backgroundColor" red="0.0097406406529999996" green="0.71086275580000002" blue="0.1231240827" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Moog Ladder">
@@ -432,8 +490,20 @@
                                     <segue destination="lsS-3i-ge1" kind="show" id="eZY-xx-708"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-PU-Nl3">
-                                <rect key="frame" x="0.0" y="168" width="600" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mo-bs-JIQ">
+                                <rect key="frame" x="0.0" y="119" width="600" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Ring Modulator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uxf-vC-lQG" kind="show" id="dh7-JC-MQY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-PU-Nl3">
+                                <rect key="frame" x="0.0" y="215" width="600" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.011788656139999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Reverb">
@@ -449,16 +519,29 @@
                         <constraints>
                             <constraint firstItem="wMv-jG-XIN" firstAttribute="top" secondItem="Pj1-dX-bVC" secondAttribute="bottom" constant="8" id="1xc-qL-ty2"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="height" secondItem="wMv-jG-XIN" secondAttribute="height" id="4ZO-9i-Jtk"/>
+                            <constraint firstItem="8mo-bs-JIQ" firstAttribute="centerX" secondItem="wMv-jG-XIN" secondAttribute="centerX" id="6sr-Ea-Tdq"/>
+                            <constraint firstItem="7h4-PU-Nl3" firstAttribute="top" secondItem="sRe-us-oMX" secondAttribute="bottom" id="7c7-Ke-F1r"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="height" secondItem="7h4-PU-Nl3" secondAttribute="height" id="9e3-7h-ENZ"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="width" secondItem="7h4-PU-Nl3" secondAttribute="width" id="9pD-4w-2Vu"/>
+                            <constraint firstItem="8mo-bs-JIQ" firstAttribute="top" secondItem="wMv-jG-XIN" secondAttribute="bottom" constant="-1" id="K5g-rX-urq"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="centerX" secondItem="wMv-jG-XIN" secondAttribute="centerX" id="OvC-4u-pzX"/>
+                            <constraint firstItem="wMv-jG-XIN" firstAttribute="height" secondItem="qAN-54-vTG" secondAttribute="height" multiplier="0.2" id="QaY-kk-bmM"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="top" secondItem="wMv-jG-XIN" secondAttribute="bottom" id="Rql-WH-c2C"/>
+                            <constraint firstItem="sRe-us-oMX" firstAttribute="top" secondItem="8mo-bs-JIQ" secondAttribute="bottom" id="Udd-sI-P2i"/>
+                            <constraint firstItem="8mo-bs-JIQ" firstAttribute="width" secondItem="wMv-jG-XIN" secondAttribute="width" id="VVu-kB-huV"/>
+                            <constraint firstItem="8mo-bs-JIQ" firstAttribute="height" secondItem="wMv-jG-XIN" secondAttribute="height" id="XR4-JY-AKy"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="width" secondItem="wMv-jG-XIN" secondAttribute="width" id="Xtm-b9-Och"/>
                             <constraint firstAttribute="width" secondItem="wMv-jG-XIN" secondAttribute="width" id="qgI-vM-IS5"/>
                             <constraint firstItem="sRe-us-oMX" firstAttribute="centerX" secondItem="7h4-PU-Nl3" secondAttribute="centerX" id="rBv-Lf-2oR"/>
                             <constraint firstAttribute="centerX" secondItem="wMv-jG-XIN" secondAttribute="centerX" id="w8c-Ac-Lh7"/>
                             <constraint firstItem="7h4-PU-Nl3" firstAttribute="top" secondItem="sRe-us-oMX" secondAttribute="bottom" id="y2h-Xi-iuS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Rql-WH-c2C"/>
+                                <exclude reference="y2h-Xi-iuS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Effects" id="bjs-Fh-CpS"/>
                 </viewController>
