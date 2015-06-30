@@ -37,4 +37,4 @@ User Contributions
 
 Anyone is welcomed to submit their project as an example by forking this repository and issuing pull requests.
 
-AudioKit itself should not be embedded in the submission, but the projects should refer to the versioned copy of AudioKit included in this repository ([V1.3 is the current AudioKit](http://github.com/audiokit/AudioKit/)).
+AudioKit itself should not be embedded in the submission, but the projects should refer to the versioned copy of AudioKit included in this repository ([V2.1 is the current AudioKit](http://github.com/audiokit/AudioKit/)).
