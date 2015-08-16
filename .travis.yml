@@ -6,6 +6,7 @@ env:
 before_install: gem install xcpretty -N
 
 script:
+- if test `find . -name \*.pbxproj -exec grep -H /Users/ {} \;|tee /tmp/found|wc -l` -gt 0; then cat /tmp/found; exit 1; fi
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/BinauralAudio/BinauralAudio.xcodeproj               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/ContinuousControl/ContinuousControl.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Convolution/Convolution.xcodeproj                   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
