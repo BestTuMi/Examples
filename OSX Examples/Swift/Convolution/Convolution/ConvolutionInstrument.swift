@@ -18,7 +18,7 @@ class ConvolutionInstrument: AKInstrument
         super.init()
         
         let file = AKManager.pathToSoundFile("808loop", ofType: "wav")
-        let loop = AKFileInput(filename: file)
+        let loop = AKFileInput(filename: file!)
         loop.loop = true;
         
         let dish = String(NSBundle.mainBundle().pathForResource("dish",      ofType: "wav")!)
