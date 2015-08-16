@@ -378,7 +378,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aure/Developer/AKExamples/AudioKitV2.1/AudioKit/Platforms/OSX,
+					../../../AudioKitV2.1/AudioKit/Platforms/OSX,
 				);
 				INFOPLIST_FILE = PlayAudioFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -396,7 +396,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aure/Developer/AKExamples/AudioKitV2.1/AudioKit/Platforms/OSX,
+					../../../AudioKitV2.1/AudioKit/Platforms/OSX,
 				);
 				INFOPLIST_FILE = PlayAudioFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
