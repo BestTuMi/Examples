@@ -62,7 +62,7 @@
 		C407D5721969D75D00322F25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C407D7921969D83C00322F25 /* HarmonizerInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HarmonizerInstrument.h; path = Instruments/HarmonizerInstrument.h; sourceTree = "<group>"; };
 		C407D7931969D83C00322F25 /* HarmonizerInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HarmonizerInstrument.m; path = Instruments/HarmonizerInstrument.m; sourceTree = "<group>"; };
-		C4FAE40A1AEA53DF00FD71E2 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKitV2.1/AudioKit.xcodeproj; sourceTree = "<group>"; };
+		C4FAE40A1AEA53DF00FD71E2 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKitV2.2/AudioKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,7 +353,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.1/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,7 +373,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.1/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
