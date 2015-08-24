@@ -29,7 +29,7 @@
     conv = [[ConvolutionInstrument alloc] init];
     [AKOrchestra addInstrument:conv];
     
-    AKAudioAnalyzer *analyzer = [[AKAudioAnalyzer alloc] initWithAudioSource:conv.auxilliaryOutput];
+    AKAudioAnalyzer *analyzer = [[AKAudioAnalyzer alloc] initWithInput:conv.auxilliaryOutput];
     [AKOrchestra addInstrument:analyzer];
     
     [analyzer play];
