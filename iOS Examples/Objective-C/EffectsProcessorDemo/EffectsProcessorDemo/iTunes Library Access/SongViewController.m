@@ -93,7 +93,7 @@
     global.variableDelay = [[VariableDelay alloc] initWithAudioSource:global.audioFilePlayer.auxilliaryOutput];
     global.ringModulator = [[RingModulator alloc] initWithAudioSource:global.variableDelay.auxilliaryOutput];
     global.moogLadder = [[MoogLadder alloc] initWithAudioSource:global.ringModulator.auxilliaryOutput];
-    global.reverb = [[Reverb alloc] initWithAudioSource:global.moogLadder.auxilliaryOutput];
+    global.reverb = [[AKReverbPedal alloc] initWithStereoInput:global.moogLadder.auxilliaryOutput];
     
     [AKOrchestra addInstrument:global.audioFilePlayer];
     [AKOrchestra addInstrument:global.variableDelay];

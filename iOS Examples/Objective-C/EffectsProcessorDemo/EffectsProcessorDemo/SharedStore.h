@@ -14,13 +14,12 @@
 #import "AudioFilePlayer.h"
 #import "VariableDelay.h"
 #import "MoogLadder.h"
-#import "Reverb.h"
 #import "RingModulator.h"
 
 @interface SharedStore : NSObject
 
 @property (nonatomic, retain) AudioFilePlayer *audioFilePlayer;
-@property (nonatomic, retain) Reverb *reverb;
+@property (nonatomic, retain) AKReverbPedal *reverb;
 @property (nonatomic, retain) VariableDelay *variableDelay;
 @property (nonatomic, retain) MoogLadder *moogLadder;
 @property (nonatomic, retain) RingModulator *ringModulator;
