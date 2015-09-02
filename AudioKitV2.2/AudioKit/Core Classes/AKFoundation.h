@@ -259,6 +259,7 @@
 
 // Utilities - Instruments - File Players
 #import "AKAudioFilePlayer.h"
+#import "AKStereoAudioFilePlayer.h"
 
 // Utilities - Instruments - Microphone
 #import "AKMicrophone.h"

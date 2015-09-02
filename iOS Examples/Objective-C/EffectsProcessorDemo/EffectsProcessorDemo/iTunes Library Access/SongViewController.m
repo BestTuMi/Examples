@@ -64,7 +64,7 @@
     global = [SharedStore globals];
     if ([[(UIButton *)sender titleLabel].text isEqualToString:@"Play"]) {
         [self loadSong];
-        Playback *playback = [[Playback alloc] initWithStartTime:startTime];
+        AKStereoAudioFilePlayback *playback = [[AKStereoAudioFilePlayback alloc] initWithStartTime:startTime];
         [global.audioFilePlayer playNote:playback];
         [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
         _playButton.hidden = NO;
@@ -89,7 +89,7 @@
 //    [AKOrchestra reset];
     
     // Create the orchestra and instruments
-    global.audioFilePlayer = [[AudioFilePlayer alloc] init];
+    global.audioFilePlayer = [[AKStereoAudioFilePlayer alloc] init];
     global.variableDelay = [[VariableDelay alloc] initWithAudioSource:global.audioFilePlayer.auxilliaryOutput];
     global.ringModulator = [[RingModulator alloc] initWithAudioSource:global.variableDelay.auxilliaryOutput];
     global.moogLadder = [[MoogLadder alloc] initWithAudioSource:global.ringModulator.auxilliaryOutput];

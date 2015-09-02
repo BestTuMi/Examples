@@ -31,7 +31,7 @@
     [AKOrchestra reset];
     
     // Create the orchestra and instruments
-    global.audioFilePlayer = [[AudioFilePlayer alloc] initWithFilename:file];
+    global.audioFilePlayer = [[AKStereoAudioFilePlayer alloc] initWithFilename:file];
     global.variableDelay = [[VariableDelay alloc] initWithAudioSource:global.audioFilePlayer.auxilliaryOutput];
     global.ringModulator = [[RingModulator alloc] initWithAudioSource:global.variableDelay.auxilliaryOutput];
     global.moogLadder = [[MoogLadder alloc] initWithAudioSource:global.ringModulator.auxilliaryOutput];
@@ -43,7 +43,7 @@
     [AKOrchestra addInstrument:global.moogLadder];
     [AKOrchestra addInstrument:global.reverb];
     
-    Playback *playback = [[Playback alloc] initWithStartTime:startTime];
+    AKStereoAudioFilePlayback *playback = [[AKStereoAudioFilePlayback alloc] initWithStartTime:startTime];
     [global.variableDelay play];
     [global.ringModulator play];
     [global.moogLadder play];

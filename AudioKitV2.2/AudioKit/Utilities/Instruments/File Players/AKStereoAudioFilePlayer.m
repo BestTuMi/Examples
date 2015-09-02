@@ -1,14 +1,14 @@
 //
-//  AudioFilePlayer.m
-//  Song Library Player Example
+//  AKStereoAudioFilePlayer.m
+//  AudioKit
 //
-//  Created by Aurelius Prochazka on 6/16/12.
-//  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
+//  Created by Aurelius Prochazka on 9/1/15.
+//  Copyright (c) 2015 AudioKit. All rights reserved.
 //
 
-#import "AudioFilePlayer.h"
+#import "AKStereoAudioFilePlayer.h"
 
-@implementation AudioFilePlayer
+@implementation AKStereoAudioFilePlayer
 
 - (instancetype)init {
     NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         
-        Playback *note = [[Playback alloc] init];
+        AKStereoAudioFilePlayback *note = [[AKStereoAudioFilePlayback alloc] init];
         
         _filePosition = [[AKInstrumentProperty alloc] initWithValue:0];
         
@@ -41,7 +41,7 @@
 
 @end
 
-@implementation Playback
+@implementation AKStereoAudioFilePlayback
 
 - (instancetype)init {
     self = [super init];

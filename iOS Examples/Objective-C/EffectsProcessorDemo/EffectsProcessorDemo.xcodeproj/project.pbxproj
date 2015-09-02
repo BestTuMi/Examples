@@ -19,7 +19,6 @@
 		C46B2A2A1A7B60CC00328AF3 /* MoogLadderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A131A7B60CC00328AF3 /* MoogLadderViewController.m */; };
 		C46B2A2B1A7B60CC00328AF3 /* ReverbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A151A7B60CC00328AF3 /* ReverbViewController.m */; };
 		C46B2A2C1A7B60CC00328AF3 /* VariableDelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A171A7B60CC00328AF3 /* VariableDelayViewController.m */; };
-		C46B2A2D1A7B60CC00328AF3 /* AudioFilePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A1A1A7B60CC00328AF3 /* AudioFilePlayer.m */; };
 		C46B2A2E1A7B60CC00328AF3 /* MoogLadder.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A1C1A7B60CC00328AF3 /* MoogLadder.m */; };
 		C46B2A301A7B60CC00328AF3 /* VariableDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A201A7B60CC00328AF3 /* VariableDelay.m */; };
 		C46B2A311A7B60CC00328AF3 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46B2A231A7B60CC00328AF3 /* AlbumsViewController.m */; };
@@ -85,8 +84,6 @@
 		C46B2A151A7B60CC00328AF3 /* ReverbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReverbViewController.m; sourceTree = "<group>"; };
 		C46B2A161A7B60CC00328AF3 /* VariableDelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableDelayViewController.h; sourceTree = "<group>"; };
 		C46B2A171A7B60CC00328AF3 /* VariableDelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableDelayViewController.m; sourceTree = "<group>"; };
-		C46B2A191A7B60CC00328AF3 /* AudioFilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFilePlayer.h; sourceTree = "<group>"; };
-		C46B2A1A1A7B60CC00328AF3 /* AudioFilePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFilePlayer.m; sourceTree = "<group>"; };
 		C46B2A1B1A7B60CC00328AF3 /* MoogLadder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoogLadder.h; sourceTree = "<group>"; };
 		C46B2A1C1A7B60CC00328AF3 /* MoogLadder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoogLadder.m; sourceTree = "<group>"; };
 		C46B2A1F1A7B60CC00328AF3 /* VariableDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableDelay.h; sourceTree = "<group>"; };
@@ -184,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				C4FAE3EC1AEA4EEC00FD71E2 /* AKSoundFiles.bundle */,
-				C46B2A191A7B60CC00328AF3 /* AudioFilePlayer.h */,
-				C46B2A1A1A7B60CC00328AF3 /* AudioFilePlayer.m */,
 				C46B2A1B1A7B60CC00328AF3 /* MoogLadder.h */,
 				C46B2A1C1A7B60CC00328AF3 /* MoogLadder.m */,
 				C43514C11B391C20005DB41D /* RingModulator.h */,
@@ -334,7 +329,6 @@
 				C46B2A311A7B60CC00328AF3 /* AlbumsViewController.m in Sources */,
 				C46B2A341A7B60CC00328AF3 /* SongViewController.m in Sources */,
 				C46B2A331A7B60CC00328AF3 /* SongsViewController.m in Sources */,
-				C46B2A2D1A7B60CC00328AF3 /* AudioFilePlayer.m in Sources */,
 				E47171211A7C77C500775134 /* SamplesViewController.m in Sources */,
 				C46B2A2C1A7B60CC00328AF3 /* VariableDelayViewController.m in Sources */,
 				C46B27D11A7B037300328AF3 /* main.m in Sources */,

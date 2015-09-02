@@ -56,6 +56,10 @@
 		C4A148281B5F05290054F090 /* AKMidiInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A148261B5F05290054F090 /* AKMidiInput.m */; };
 		C4A148291B5F05290054F090 /* AKMidiInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A148261B5F05290054F090 /* AKMidiInput.m */; };
 		C4A1482A1B5F05290054F090 /* AKMidiInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A148261B5F05290054F090 /* AKMidiInput.m */; };
+		C4A33D4B1B96C3CC004CE139 /* AKStereoAudioFilePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A33D491B96C3CC004CE139 /* AKStereoAudioFilePlayer.h */; };
+		C4A33D4C1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A33D4A1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m */; };
+		C4A33D4D1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A33D4A1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m */; };
+		C4A33D4E1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A33D4A1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m */; };
 		C4A42C6F1B42710C0082DED3 /* AKSoundFontPreset.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A42C6D1B42710C0082DED3 /* AKSoundFontPreset.m */; };
 		C4A42C701B42710C0082DED3 /* AKSoundFontPreset.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A42C6D1B42710C0082DED3 /* AKSoundFontPreset.m */; };
 		C4A42C711B42710C0082DED3 /* AKSoundFontPreset.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A42C6D1B42710C0082DED3 /* AKSoundFontPreset.m */; };
@@ -679,6 +683,8 @@
 		C4A148201B5F01F70054F090 /* AKMidiNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMidiNote.m; sourceTree = "<group>"; };
 		C4A148251B5F05290054F090 /* AKMidiInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMidiInput.h; sourceTree = "<group>"; };
 		C4A148261B5F05290054F090 /* AKMidiInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMidiInput.m; sourceTree = "<group>"; };
+		C4A33D491B96C3CC004CE139 /* AKStereoAudioFilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStereoAudioFilePlayer.h; sourceTree = "<group>"; };
+		C4A33D4A1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStereoAudioFilePlayer.m; sourceTree = "<group>"; };
 		C4A42C6C1B42710C0082DED3 /* AKSoundFontPreset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKSoundFontPreset.h; path = "AudioKit/Sound Fonts/AKSoundFontPreset.h"; sourceTree = SOURCE_ROOT; };
 		C4A42C6D1B42710C0082DED3 /* AKSoundFontPreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKSoundFontPreset.m; path = "AudioKit/Sound Fonts/AKSoundFontPreset.m"; sourceTree = SOURCE_ROOT; };
 		C4A42C721B4271F90082DED3 /* AKSoundFontInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKSoundFontInstrument.h; path = "AudioKit/Sound Fonts/AKSoundFontInstrument.h"; sourceTree = SOURCE_ROOT; };
@@ -1155,6 +1161,8 @@
 			children = (
 				C4FAE5EF1AED6B2600FD71E2 /* AKAudioFilePlayer.h */,
 				C4FAE5F01AED6B2600FD71E2 /* AKAudioFilePlayer.m */,
+				C4A33D491B96C3CC004CE139 /* AKStereoAudioFilePlayer.h */,
+				C4A33D4A1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m */,
 			);
 			path = "File Players";
 			sourceTree = "<group>";
@@ -2047,6 +2055,7 @@
 				EA78DD8D1B605892001843F3 /* AKMidiEvent.h in Headers */,
 				C4258E401B3E554D00D91B3D /* AKPitchShifter.h in Headers */,
 				EADE698D1B5268D100996FE0 /* EZPlot.h in Headers */,
+				C4A33D4B1B96C3CC004CE139 /* AKStereoAudioFilePlayer.h in Headers */,
 				EADE697B1B52687700996FE0 /* EZAudioUtilities.h in Headers */,
 				C4C8125B1AE5CA03003A8B73 /* AKSekereInstrument.h in Headers */,
 				C4FAE5F11AED6B2600FD71E2 /* AKAudioFilePlayer.h in Headers */,
@@ -2174,6 +2183,7 @@
 				EA8E95B01AD3C6850057E979 /* AKStereoAudio.m in Sources */,
 				EA8E95F61AD3C6850057E979 /* AKADSREnvelope.m in Sources */,
 				EA8E96081AD3C6850057E979 /* AKMarimba.m in Sources */,
+				C4A33D4C1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */,
 				EA8E961A1AD3C6850057E979 /* AKSimpleWaveGuideModel.m in Sources */,
 				EA8E95B71AD3C6850057E979 /* AKMandolinInstrument.m in Sources */,
 				EA8E962A1AD3C6850057E979 /* AKDelay.m in Sources */,
@@ -2380,6 +2390,7 @@
 				EA8E96CF1AD3CA4B0057E979 /* AKPhasor.m in Sources */,
 				EA8E96D01AD3CA4B0057E979 /* AKVCOscillator.m in Sources */,
 				EA8E96D11AD3CA4B0057E979 /* AKMandolin.m in Sources */,
+				C4A33D4E1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */,
 				EA8E96D21AD3CA4B0057E979 /* AKMarimba.m in Sources */,
 				EA8E96D31AD3CA4B0057E979 /* AKPluckedString.m in Sources */,
 				EA8E96D41AD3CA4B0057E979 /* AKStruckMetalBar.m in Sources */,
@@ -2586,6 +2597,7 @@
 				EAA0F4F41AE71C8F007CD7C9 /* AKStereoAudio.m in Sources */,
 				EAA0F4F51AE71C8F007CD7C9 /* AKADSREnvelope.m in Sources */,
 				EAA0F4F61AE71C8F007CD7C9 /* AKMarimba.m in Sources */,
+				C4A33D4D1B96C3CC004CE139 /* AKStereoAudioFilePlayer.m in Sources */,
 				EAA0F4F71AE71C8F007CD7C9 /* AKSimpleWaveGuideModel.m in Sources */,
 				EAA0F4F81AE71C8F007CD7C9 /* AKMandolinInstrument.m in Sources */,
 				EAA0F4F91AE71C8F007CD7C9 /* AKDelay.m in Sources */,

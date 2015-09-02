@@ -11,14 +11,13 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 #import "AKFoundation.h"
-#import "AudioFilePlayer.h"
 #import "VariableDelay.h"
 #import "MoogLadder.h"
 #import "RingModulator.h"
 
 @interface SharedStore : NSObject
 
-@property (nonatomic, retain) AudioFilePlayer *audioFilePlayer;
+@property (nonatomic, retain) AKStereoAudioFilePlayer *audioFilePlayer;
 @property (nonatomic, retain) AKReverbPedal *reverb;
 @property (nonatomic, retain) VariableDelay *variableDelay;
 @property (nonatomic, retain) MoogLadder *moogLadder;

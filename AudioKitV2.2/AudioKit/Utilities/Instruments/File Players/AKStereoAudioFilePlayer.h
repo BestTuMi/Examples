@@ -1,14 +1,15 @@
 //
-//  AudioFilePlayer.h
-//  Song Library Player Example
+//  AKStereoAudioFilePlayer.h
+//  AudioKit
 //
-//  Created by Aurelius Prochazka on 6/16/12.
-//  Copyright (c) 2014 Aurelius Prochazka. All rights reserved.
+//  Created by Aurelius Prochazka on 9/1/15.
+//  Copyright (c) 2015 AudioKit. All rights reserved.
 //
+
 
 #import "AKFoundation.h"
 
-@interface AudioFilePlayer : AKInstrument
+@interface AKStereoAudioFilePlayer : AKInstrument
 
 // Audio outlet for global effects processing
 @property (readonly) AKStereoAudio *auxilliaryOutput;
@@ -18,7 +19,7 @@
 
 @end
 
-@interface Playback : AKNote
+@interface AKStereoAudioFilePlayback : AKNote
 
 @property AKNoteProperty *startTime;
 
