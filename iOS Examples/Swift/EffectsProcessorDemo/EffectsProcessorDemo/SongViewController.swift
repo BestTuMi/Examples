@@ -95,7 +95,7 @@ class SongViewController: UIViewController {
         global.audioFilePlayer = AudioFilePlayer()
         global.variableDelay = VariableDelay(audioSource: global.audioFilePlayer.auxilliaryOutput)
         global.moogLadder = MoogLadder(audioSource: global.variableDelay!.auxilliaryOutput)
-        global.reverb = Reverb(audioSource: global.moogLadder!.auxilliaryOutput)
+        global.reverb = AKReverbPedal(stereoInput: global.moogLadder!.auxilliaryOutput)
         
         AKOrchestra.addInstrument(global.audioFilePlayer)
         AKOrchestra.addInstrument(global.variableDelay!)

@@ -13,7 +13,7 @@ import MediaPlayer
 class SharedStore: NSObject {
     
     var audioFilePlayer = AudioFilePlayer()
-    var reverb: Reverb?
+    var reverb: AKReverbPedal?
     var variableDelay: VariableDelay?
     var moogLadder: MoogLadder?
     

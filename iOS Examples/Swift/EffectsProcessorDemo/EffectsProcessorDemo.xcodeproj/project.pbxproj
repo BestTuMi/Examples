@@ -16,7 +16,6 @@
 		94785B871B0BB09800CECD1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94785B861B0BB09800CECD1D /* Images.xcassets */; };
 		94785B8A1B0BB09800CECD1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94785B881B0BB09800CECD1D /* LaunchScreen.xib */; };
 		948FE0861B13B96A00CEEE64 /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FE0851B13B96A00CEEE64 /* SamplesViewController.swift */; };
-		94F142941B1110840017F97A /* Reverb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F142931B1110840017F97A /* Reverb.swift */; };
 		94F142961B11140C0017F97A /* VariableDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F142951B11140C0017F97A /* VariableDelay.swift */; };
 		94F142981B1122570017F97A /* MoogLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F142971B1122570017F97A /* MoogLadder.swift */; };
 		94F1429A1B1127A00017F97A /* MoogLadderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F142991B1127A00017F97A /* MoogLadderViewController.swift */; };
@@ -73,7 +72,6 @@
 		94785B861B0BB09800CECD1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94785B891B0BB09800CECD1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		948FE0851B13B96A00CEEE64 /* SamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplesViewController.swift; sourceTree = "<group>"; };
-		94F142931B1110840017F97A /* Reverb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reverb.swift; sourceTree = "<group>"; };
 		94F142951B11140C0017F97A /* VariableDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableDelay.swift; sourceTree = "<group>"; };
 		94F142971B1122570017F97A /* MoogLadder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoogLadder.swift; sourceTree = "<group>"; };
 		94F142991B1127A00017F97A /* MoogLadderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoogLadderViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			children = (
 				941FCE061B0BD88D00AC8A3B /* AudioFilePlayer.swift */,
 				94F142971B1122570017F97A /* MoogLadder.swift */,
-				94F142931B1110840017F97A /* Reverb.swift */,
 				94F142951B11140C0017F97A /* VariableDelay.swift */,
 			);
 			name = Instruments;
@@ -287,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F142941B1110840017F97A /* Reverb.swift in Sources */,
 				94F142961B11140C0017F97A /* VariableDelay.swift in Sources */,
 				948FE0861B13B96A00CEEE64 /* SamplesViewController.swift in Sources */,
 				94F142A11B1137FB0017F97A /* VariableDelayViewController.swift in Sources */,
@@ -427,7 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "EffectsProcessorDemo/EffectsProcessorDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EffectsProcessorDemo/EffectsProcessorDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 			};
@@ -442,7 +438,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "EffectsProcessorDemo/EffectsProcessorDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EffectsProcessorDemo/EffectsProcessorDemo-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 			};
 			name = Release;

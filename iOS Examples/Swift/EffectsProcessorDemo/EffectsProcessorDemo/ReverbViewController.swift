@@ -17,7 +17,7 @@ class ReverbViewController: UIViewController {
         super.viewDidLoad()
 
         let global = SharedStore.globals
-        feedbackSlider.property = global.reverb!.reverbFeedback
+        feedbackSlider.property = global.reverb!.feedback
         mixSlider.property = global.reverb!.mix
     }
 
