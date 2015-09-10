@@ -161,6 +161,7 @@
 		94C56D031B0BB8C10070516B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = audiokit.io;
 				TargetAttributes = {
