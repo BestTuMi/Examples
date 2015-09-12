@@ -13,7 +13,7 @@ import MediaPlayer
 class AlbumsViewController: UITableViewController {
     
     var artistName: String!
-    var albumsList = []
+    var albumsList = [MPMediaItemCollection]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,10 @@ class AlbumsViewController: UITableViewController {
         let albumsQuery = MPMediaQuery.albumsQuery()
         albumsQuery.addFilterPredicate(artistPredicate)
         
-        albumsList = albumsQuery.collections
-        tableView.reloadData()
+        if let list = albumsQuery.collections {
+            albumsList = list
+            tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -40,7 +42,7 @@ class AlbumsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
         let cellIdentifier = "AlbumCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ?? UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
 
         // Configure the cell...
         let repItem = albumsList[indexPath.row].representativeItem!

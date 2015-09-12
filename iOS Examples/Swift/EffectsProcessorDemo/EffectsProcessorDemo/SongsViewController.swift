@@ -28,8 +28,10 @@ class SongsViewController: UITableViewController {
         songsQuery.addFilterPredicate(artistPredicate)
         songsQuery.addFilterPredicate(MPMediaPropertyPredicate(value: NSNumber(bool: false), forProperty: MPMediaItemPropertyIsCloudItem))
         
-        songsList = songsQuery.items
-        tableView.reloadData()
+        if songsQuery.items != nil {
+            songsList = songsQuery.items!
+            tableView.reloadData()
+        }
     }
    
     // MARK: - Table view data source
@@ -44,13 +46,13 @@ class SongsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier = "SongCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ?? UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
         
         let song: MPMediaItem = songsList[indexPath.row] as! MPMediaItem
         let songTitle = song.valueForProperty(MPMediaItemPropertyTitle) as! String
         
-        let minutes = song.valueForProperty(MPMediaItemPropertyPlaybackDuration).floatValue / 60
-        let seconds = song.valueForProperty(MPMediaItemPropertyPlaybackDuration).floatValue % 60
+        let minutes = song.valueForProperty(MPMediaItemPropertyPlaybackDuration)!.floatValue / 60
+        let seconds = song.valueForProperty(MPMediaItemPropertyPlaybackDuration)!.floatValue % 60
         
         cell.textLabel?.text = songTitle
         cell.detailTextLabel?.text = String(format: "%d:%02d", minutes, seconds)
@@ -63,10 +65,11 @@ class SongsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "SongSegue" {
-            let indexPath = tableView.indexPathForSelectedRow()
-            let songVC = segue.destinationViewController as! SongViewController
-            songVC.song = songsList[indexPath!.row] as? MPMediaItem
-            songVC.title = songVC.song!.valueForProperty(MPMediaItemPropertyTitle) as? String
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let songVC = segue.destinationViewController as! SongViewController
+                songVC.song = songsList[indexPath.row] as? MPMediaItem
+                songVC.title = songVC.song!.valueForProperty(MPMediaItemPropertyTitle) as? String
+            }
         }
         
     }

@@ -25,8 +25,8 @@ class SongViewController: UIViewController {
         didSet {
             global = SharedStore.globals
             
-            if song!.valueForProperty(MPMediaItemPropertyArtistPersistentID).integerValue !=
-                global.currentSong?.valueForProperty(MPMediaItemPropertyArtistPersistentID).integerValue {
+            if song!.valueForProperty(MPMediaItemPropertyArtistPersistentID)!.integerValue !=
+                global.currentSong?.valueForProperty(MPMediaItemPropertyArtistPersistentID)!.integerValue {
                 
                 global.audioFilePlayer.stop()
                 global.isPlaying = false
@@ -57,7 +57,7 @@ class SongViewController: UIViewController {
     @IBAction func play(sender: UIButton) {
         
         if isReadyToPlay == false {
-            println("Not Ready")
+            print("Not Ready", terminator: "")
             return
         }
         
@@ -84,8 +84,8 @@ class SongViewController: UIViewController {
         global = SharedStore.globals
         
         if NSFileManager.defaultManager().fileExistsAtPath(exportPath) == false {
-            println("exportPath: \(exportPath)")
-            println("File does not exist.")
+            print("exportPath: \(exportPath)", terminator: "")
+            print("File does not exist.", terminator: "")
             return
         }
     
@@ -111,46 +111,56 @@ class SongViewController: UIViewController {
         
         isReadyToPlay = false
         
-        let docDirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        let docDir = docDirs[0] as! String
-        exportPath = docDir.stringByAppendingPathComponent("exported").stringByAppendingPathExtension("wav")!
+        let docDirs: [NSString] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let docDir = docDirs[0] 
+        let tmp = docDir.stringByAppendingPathComponent("exported") as NSString
+        exportPath = tmp.stringByAppendingPathExtension("wav")!
     
         let url = song.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
         let songAsset = AVURLAsset(URL: url, options: nil)
         
         var assetError: NSError?
-        var assetReader: AVAssetReader?
         
-        if let assetReader = AVAssetReader(asset: songAsset, error: &assetError) {
+        do {
+            let assetReader = try AVAssetReader(asset: songAsset)
             
             // Create an asset reader ouput and add it to the reader.
             let assetReaderOutput = AVAssetReaderAudioMixOutput(audioTracks: songAsset.tracks, audioSettings: nil)
             
             if !assetReader.canAddOutput(assetReaderOutput) {
-                println("Can't add reader output...die!")
+                print("Can't add reader output...die!", terminator: "")
             } else {
                 assetReader.addOutput(assetReaderOutput)
             }
             
             // If a file already exists at the export path, remove it.
             if NSFileManager.defaultManager().fileExistsAtPath(exportPath) {
-                println("Deleting said file.")
-                NSFileManager.defaultManager().removeItemAtPath(exportPath, error: nil)
+                print("Deleting said file.", terminator: "")
+                do {
+                    try NSFileManager.defaultManager().removeItemAtPath(exportPath)
+                } catch _ {
+                }
             }
             
             // Create an asset writer with the export path.
             let exportURL = NSURL.fileURLWithPath(exportPath)
-            let assetWriter = AVAssetWriter(URL: exportURL, fileType: AVFileTypeCoreAudioFormat, error: &assetError)
+            let assetWriter: AVAssetWriter!
+            do {
+                assetWriter = try AVAssetWriter(URL: exportURL, fileType: AVFileTypeCoreAudioFormat)
+            } catch let error as NSError {
+                assetError = error
+                assetWriter = nil
+            }
             
             if assetError != nil {
-                println("Error \(assetError)")
+                print("Error \(assetError)", terminator: "")
                 return
             }
             
             // Define the format settings for the asset writer.  Defined in AVAudioSettings.h
-            var channelLayout: AudioChannelLayout?
+
             // memset(&channelLayout, 0, sizeof(AudioChannelLayout))
-            let outputSettings = [ AVFormatIDKey: NSNumber(integer: kAudioFormatLinearPCM),
+            let outputSettings = [ AVFormatIDKey: NSNumber(unsignedInt: kAudioFormatLinearPCM),
                 AVSampleRateKey: NSNumber(float: 44100.0),
                 AVNumberOfChannelsKey: NSNumber(unsignedInt: 2),
                 // AVChannelLayoutKey: NSData(bytes: &channelLayout, length: sizeof(AudioChannelLayout)),
@@ -167,7 +177,7 @@ class SongViewController: UIViewController {
             if assetWriter.canAddInput(assetWriterInput) {
                 assetWriter.addInput(assetWriterInput)
             } else {
-                println("cant add asset writer input...die!")
+                print("cant add asset writer input...die!", terminator: "")
                 return
             }
                 
@@ -179,7 +189,7 @@ class SongViewController: UIViewController {
             assetReader.startReading()
                 
             // Set the session start time.
-            let soundTrack = songAsset.tracks[0] as! AVAssetTrack
+            let soundTrack = songAsset.tracks[0]
             let cmtStartTime: CMTime = CMTimeMake(0, soundTrack.naturalTimeScale)
             assetWriter.startSessionAtSourceTime(cmtStartTime)
             
@@ -198,9 +208,7 @@ class SongViewController: UIViewController {
                 // with buffers read from the reader output.
                 while (assetWriterInput.readyForMoreMediaData) {
                     
-                    let nextBuffer = assetReaderOutput.copyNextSampleBuffer()
-                    
-                    if (nextBuffer != nil) {
+                    if let nextBuffer = assetReaderOutput.copyNextSampleBuffer() {
                         assetWriterInput.appendSampleBuffer(nextBuffer)
                         // Increment byte count.
                         convertedByteCount += CMSampleBufferGetTotalSampleSize(nextBuffer)
@@ -220,10 +228,10 @@ class SongViewController: UIViewController {
                     // CFRelease(nextBuffer)
                 }
             })
-
                 
-        } else {
-            println("Initializing assetReader Failed")
+        } catch let error as NSError {
+            assetError = error
+            print("Initializing assetReader Failed", terminator: "")
         }
         
     }

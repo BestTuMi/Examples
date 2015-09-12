@@ -34,11 +34,11 @@ class AudioFilePlayer: AKInstrument {
     }
     
     convenience override init() {
-        let docDirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        let docDir = docDirs[0] as! String
-        let file = docDir.stringByAppendingPathComponent("exported").stringByAppendingPathExtension("wav")
+        let docDirs: [NSString] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let docDir = docDirs[0]
+        let file = docDir.stringByAppendingPathComponent("exported") as NSString
         
-        self.init(filename: file!)
+        self.init(filename: file.stringByAppendingPathExtension("wav")!)
     }
 
 }

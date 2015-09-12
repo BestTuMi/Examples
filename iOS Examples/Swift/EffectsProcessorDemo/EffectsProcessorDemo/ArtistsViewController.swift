@@ -17,9 +17,11 @@ class ArtistsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        artistList = MPMediaQuery.artistsQuery().collections as! [MPMediaItemCollection]
-        tableView.reloadData()
- 
+        if let list = MPMediaQuery.artistsQuery().collections {
+            artistList = list
+            tableView.reloadData()
+        }
+
     }
 
     // MARK: - Table view data source
@@ -35,7 +37,7 @@ class ArtistsViewController: UITableViewController {
       override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier = "MusicCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ?? UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
 
         // Configure the cell...
         let repItem = artistList[indexPath.row].representativeItem!
