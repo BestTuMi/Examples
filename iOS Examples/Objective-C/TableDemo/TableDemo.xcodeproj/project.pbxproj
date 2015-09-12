@@ -14,32 +14,32 @@
 		C49ACC1D1AE20769004331CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49ACC1C1AE20769004331CA /* Images.xcassets */; };
 		C49ACC201AE20769004331CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49ACC1E1AE20769004331CA /* LaunchScreen.xib */; };
 		C49ACC4C1AE22B3D004331CA /* OscillatorInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = C49ACC4B1AE22B3D004331CA /* OscillatorInstrument.m */; };
-		C4FAE5821AEB58C600FD71E2 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FAE57B1AEB58AF00FD71E2 /* libAudioKit iOS Static.a */; };
+		EA8CED741BA413E800DD53F6 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8CED6D1BA413AA00DD53F6 /* libAudioKit iOS Static.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C4FAE57A1AEB58AF00FD71E2 /* PBXContainerItemProxy */ = {
+		EA8CED6C1BA413AA00DD53F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
 			remoteInfo = "AudioKit iOS Static";
 		};
-		C4FAE57C1AEB58AF00FD71E2 /* PBXContainerItemProxy */ = {
+		EA8CED6E1BA413AA00DD53F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
 			remoteInfo = "AudioKit iOS Dynamic";
 		};
-		C4FAE57E1AEB58AF00FD71E2 /* PBXContainerItemProxy */ = {
+		EA8CED701BA413AA00DD53F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
 			remoteInfo = "AudioKit OS X";
 		};
-		C4FAE5801AEB58BE00FD71E2 /* PBXContainerItemProxy */ = {
+		EA8CED721BA413E100DD53F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */;
 			proxyType = 1;
@@ -61,7 +61,7 @@
 		C49ACC1F1AE20769004331CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C49ACC4A1AE22B3D004331CA /* OscillatorInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscillatorInstrument.h; sourceTree = "<group>"; };
 		C49ACC4B1AE22B3D004331CA /* OscillatorInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OscillatorInstrument.m; sourceTree = "<group>"; };
-		C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKitV2.2/AudioKit.xcodeproj; sourceTree = "<group>"; };
+		C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FAE5821AEB58C600FD71E2 /* libAudioKit iOS Static.a in Frameworks */,
+				EA8CED741BA413E800DD53F6 /* libAudioKit iOS Static.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +119,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C4FAE5751AEB58AF00FD71E2 /* Products */ = {
+		EA8CED671BA413AA00DD53F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4FAE57B1AEB58AF00FD71E2 /* libAudioKit iOS Static.a */,
-				C4FAE57D1AEB58AF00FD71E2 /* libAudioKit iOS Dynamic.a */,
-				C4FAE57F1AEB58AF00FD71E2 /* libAudioKit OS X.a */,
+				EA8CED6D1BA413AA00DD53F6 /* libAudioKit iOS Static.a */,
+				EA8CED6F1BA413AA00DD53F6 /* libAudioKit iOS Dynamic.a */,
+				EA8CED711BA413AA00DD53F6 /* libAudioKit OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C4FAE5811AEB58BE00FD71E2 /* PBXTargetDependency */,
+				EA8CED731BA413E100DD53F6 /* PBXTargetDependency */,
 			);
 			name = TableDemo;
 			productName = TableDemo;
@@ -177,7 +177,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C4FAE5751AEB58AF00FD71E2 /* Products */;
+					ProductGroup = EA8CED671BA413AA00DD53F6 /* Products */;
 					ProjectRef = C4FAE5741AEB58AF00FD71E2 /* AudioKit.xcodeproj */;
 				},
 			);
@@ -189,25 +189,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C4FAE57B1AEB58AF00FD71E2 /* libAudioKit iOS Static.a */ = {
+		EA8CED6D1BA413AA00DD53F6 /* libAudioKit iOS Static.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit iOS Static.a";
-			remoteRef = C4FAE57A1AEB58AF00FD71E2 /* PBXContainerItemProxy */;
+			remoteRef = EA8CED6C1BA413AA00DD53F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C4FAE57D1AEB58AF00FD71E2 /* libAudioKit iOS Dynamic.a */ = {
+		EA8CED6F1BA413AA00DD53F6 /* libAudioKit iOS Dynamic.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit iOS Dynamic.a";
-			remoteRef = C4FAE57C1AEB58AF00FD71E2 /* PBXContainerItemProxy */;
+			remoteRef = EA8CED6E1BA413AA00DD53F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C4FAE57F1AEB58AF00FD71E2 /* libAudioKit OS X.a */ = {
+		EA8CED711BA413AA00DD53F6 /* libAudioKit OS X.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit OS X.a";
-			remoteRef = C4FAE57E1AEB58AF00FD71E2 /* PBXContainerItemProxy */;
+			remoteRef = EA8CED701BA413AA00DD53F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -240,10 +240,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C4FAE5811AEB58BE00FD71E2 /* PBXTargetDependency */ = {
+		EA8CED731BA413E100DD53F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "AudioKit iOS Static";
-			targetProxy = C4FAE5801AEB58BE00FD71E2 /* PBXContainerItemProxy */;
+			targetProxy = EA8CED721BA413E100DD53F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -354,12 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKit/AudioKit/**";
 			};
 			name = Debug;
 		};
@@ -367,12 +368,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "../../../AudioKit/AudioKit/**";
 			};
 			name = Release;
 		};
