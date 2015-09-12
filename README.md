@@ -32,6 +32,16 @@ OSX Examples
 * Play Audio File (Objective-C)
 * Sequences (Objective-C)
 
+Usage
+-----
+
+You need to check out the AudioKit source as a submodule before you can build the examples, with the following commands:
+
+```
+git submodule init
+git submodule update
+```
+
 User Contributions
 ----------------------
 
