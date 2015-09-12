@@ -15,7 +15,7 @@ class StyleKit: NSObject {
     class func drawHeadAndSpeakerWithAzimuth(azimuth: CGFloat) {
         
         // General Declarations
-        let context: CGContextRef = UIGraphicsGetCurrentContext()
+        let context: CGContextRef = UIGraphicsGetCurrentContext()!
         
         // Bezier Drawing
         let bezierPath: UIBezierPath = UIBezierPath()
