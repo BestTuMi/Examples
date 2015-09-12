@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         self.view.addSubview(rightTouchImageView)
     }
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
         if context == &myContext {
             
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             let height: CGFloat = self.view.frame.size.height
             
             if keyPath == "horizontalPercentage" {
-                let newValue = change[NSKeyValueChangeNewKey] as! Float
+                let newValue = change![NSKeyValueChangeNewKey] as! Float
                 
                 if (object as! TouchView) == leftView {
                     fm.amplitude.value = fm.amplitude.maximum
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
                 }
                 
             } else if keyPath == "verticalPercentage" {
-                let newValue = change[NSKeyValueChangeNewKey] as! Float
+                let newValue = change![NSKeyValueChangeNewKey] as! Float
                 
                 if (object as! TouchView) == leftView {
                     fm.carrierMultiplier.value = newValue * (fm.carrierMultiplier.maximum - fm.carrierMultiplier.minimum) + fm.carrierMultiplier.minimum
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
                 }
             
             } else {
-                NSException.raise("Unexpected Keypath", format: "%@", arguments: getVaList([keyPath]))
+            //    NSException.raise("Unexpected Keypath", format: "%@", arguments: getVaList([keyPath]))
             }
         
         } else {

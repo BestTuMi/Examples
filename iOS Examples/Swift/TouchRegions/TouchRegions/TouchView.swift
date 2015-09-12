@@ -16,7 +16,7 @@ class TouchView: UIView {
     
     // MARK: - Handle Touches
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touchSet = touches as NSSet
         for touch in touchSet {
             if firstTouch == nil || (touch as? UITouch) == firstTouch {
@@ -26,7 +26,7 @@ class TouchView: UIView {
         }
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touchSet = touches as NSSet
         for touch in touchSet {
             if firstTouch == nil || (touch as? UITouch) == firstTouch {
@@ -36,7 +36,7 @@ class TouchView: UIView {
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touchSet = touches as NSSet
         for touch in touchSet {
             if firstTouch == nil || (touch as? UITouch) == firstTouch {
