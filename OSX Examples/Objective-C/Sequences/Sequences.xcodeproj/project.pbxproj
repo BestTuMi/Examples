@@ -16,7 +16,7 @@
 		C4AC77141A91F73600B2F63B /* SequencesConductor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC77121A91F73600B2F63B /* SequencesConductor.m */; };
 		C4FAE48E1AEA5B9800FD71E2 /* CsoundLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FAE48D1AEA5B9800FD71E2 /* CsoundLib.framework */; };
 		C4FAE49D1AEA5BD900FD71E2 /* libAudioKit OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FAE49A1AEA5B9C00FD71E2 /* libAudioKit OS X.a */; };
-		C4FAE49E1AEA5BE100FD71E2 /* CsoundLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4FAE48D1AEA5B9800FD71E2 /* CsoundLib.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C4FAE49E1AEA5BE100FD71E2 /* CsoundLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4FAE48D1AEA5B9800FD71E2 /* CsoundLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,7 +178,7 @@
 		C4AC76E11A91F6D100B2F63B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Aurelius Prochazka";
 				TargetAttributes = {
 					C4AC76E81A91F6D100B2F63B = {
@@ -317,6 +317,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -386,6 +387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 			};
@@ -404,6 +406,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../../../AudioKitV2.2/AudioKit/**";
 			};
