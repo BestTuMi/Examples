@@ -7,7 +7,7 @@ before_install:
 - gem install xcpretty -N
 - git submodule init
 - git submodule update
-- cd AudioKit && git checkout $TRAVIS_BRANCH
+- cd AudioKit && git checkout $TRAVIS_BRANCH && cd ..
 
 script:
 - if test `find . -name \*.pbxproj -exec grep -H /Users/ {} \;|tee /tmp/found|wc -l` -gt 0; then cat /tmp/found; exit 1; fi
