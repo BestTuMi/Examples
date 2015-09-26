@@ -4,6 +4,16 @@
 
 This is a collection of projects built using the [AudioKit](http://audiokit.io/) synthesis, processing, and analysis framework.  More information about these examples, including demonstration movies, can be found at the [AudioKit Examples page](http://audiokit.io/examples/).
 
+Set Up
+======
+
+You need to check out the AudioKit source as a submodule before you can build the examples, with the following commands:
+
+```
+git submodule init
+git submodule update
+```
+
 Examples
 =======
 
@@ -32,15 +42,6 @@ OSX Examples
 * Play Audio File (Objective-C)
 * Sequences (Objective-C)
 
-Usage
------
-
-You need to check out the AudioKit source as a submodule before you can build the examples, with the following commands:
-
-```
-git submodule init
-git submodule update
-```
 
 User Contributions
 ----------------------
