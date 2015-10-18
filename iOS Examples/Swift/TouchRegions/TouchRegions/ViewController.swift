@@ -90,7 +90,7 @@ class ViewController: UIViewController {
                 }
             
             } else {
-            //    NSException.raise("Unexpected Keypath", format: "%@", arguments: getVaList([keyPath]))
+                NSException.raise("Unexpected Keypath", format: "%@", arguments: getVaList([keyPath as! CVarArgType]))
             }
         
         } else {
