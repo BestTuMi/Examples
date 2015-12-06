@@ -7,18 +7,32 @@
 //
 
 import UIKit
+import AudioKit
 
 class ViewController: UIViewController {
     
-    let conductor = AudioFileConductor()
+    var player: AKAudioPlayer?
+    var timePitch: AKTimePitch?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let audiokit = AKManager.sharedInstance
+        let file = NSBundle.mainBundle().pathForResource("blaster", ofType: "aiff")
+        player = AKAudioPlayer(file!)
+        
+        timePitch = AKTimePitch(player!)
+        
+        let reverb = AKReverb(timePitch!)
+        reverb.loadFactoryPreset(.LargeChamber)
+        reverb.dryWetMix = 30
+        audiokit.audioOutput = reverb
+        audiokit.start()
     }
 
     @IBAction func playButtonPressed(sender: UIButton) {
-        conductor.playBlaster()
+        player!.stop()
+        timePitch?.rate = randomFloat(0.2, 2.0)
+        player!.play()
     }
 
 }
