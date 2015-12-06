@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var modulationIndexLabel: UILabel!
     
     // Properties
-    let fm = FMOscillator()
+    let audiokit = AKManager.sharedInstance
+    let fm = AKFMOscillator(amplitude: 0.0)
+    let minFrequency: Float = 440.0
+    let maxFrequency: Float = 880.0
+    let minCarrierMultiplier: Float = 0.0
+    let maxCarrierMultiplier: Float = 2.0
+    let minModulatingMultiplier: Float = 0.0
+    let maxModulatingMultiplier: Float = 2.0
+    let minModulationIndex: Float = 0.0
+    let maxModulationIndex: Float = 30
+    let minAmplitude: Float = 0.0
+    let maxAmplitude: Float = 0.2
+    
     var leftTouchImageView: UIImageView!
     var rightTouchImageView: UIImageView!
     private var myContext = 0 // observer context
@@ -34,11 +47,8 @@ class ViewController: UIViewController {
         rightView.addObserver(self, forKeyPath: "verticalPercentage", options: options, context: &myContext)
         
         // Add Instrument
-        AKOrchestra.addInstrument(fm)
-        AKOrchestra.start()
-        
-        fm.amplitude.value = fm.amplitude.minimum
-        fm.play()
+        audiokit.audioOutput = fm
+        audiokit.start()
         
         // Setup Touch Visual Indicators
         leftTouchImageView = UIImageView(frame: CGRectMake(-350, -350, 50, 50))
@@ -62,15 +72,16 @@ class ViewController: UIViewController {
                 let newValue = change![NSKeyValueChangeNewKey] as! Float
                 
                 if (object as! TouchView) == leftView {
-                    fm.amplitude.value = fm.amplitude.maximum
-                    fm.frequency.value = newValue * (fm.frequency.maximum - fm.frequency.minimum) + fm.frequency.minimum
-                    frequencyLabel.text = String(format: "fm.baseFrequncy = %0.6f", fm.frequency.value)
+                    fm.amplitude = maxAmplitude
+                    fm.baseFrequency = newValue * (maxFrequency - minFrequency) + minFrequency
+
+                    frequencyLabel.text = String(format: "fm.baseFrequency = %0.6f", fm.baseFrequency)
                     leftTouchImageView.center = CGPointMake(CGFloat(newValue) * middle, leftTouchImageView.center.y)
                 }
                 
                 if (object as! TouchView) == rightView {
-                    fm.modulatingMultiplier.value = newValue * (fm.modulatingMultiplier.maximum - fm.modulatingMultiplier.minimum) + fm.modulatingMultiplier.minimum
-                    modulatingMultiplierLabel.text = String(format: "fm.modulatingMultiplier = %0.6f", fm.modulatingMultiplier.value)
+                    fm.modulatingMultiplier = newValue * (maxModulatingMultiplier - minModulatingMultiplier) + minModulatingMultiplier
+                    modulatingMultiplierLabel.text = String(format: "fm.modulatingMultiplier = %0.6f", fm.modulatingMultiplier)
                     rightTouchImageView.center = CGPointMake(CGFloat(newValue) * middle + middle, rightTouchImageView.center.y)
                 }
                 
@@ -78,14 +89,14 @@ class ViewController: UIViewController {
                 let newValue = change![NSKeyValueChangeNewKey] as! Float
                 
                 if (object as! TouchView) == leftView {
-                    fm.carrierMultiplier.value = newValue * (fm.carrierMultiplier.maximum - fm.carrierMultiplier.minimum) + fm.carrierMultiplier.minimum
-                    carrierMultiplierLabel.text = String(format: "fm.carrierMultiplier = %0.6f", fm.carrierMultiplier.value)
+                    fm.carrierMultiplier = newValue * (maxCarrierMultiplier - minCarrierMultiplier) + minCarrierMultiplier
+                    carrierMultiplierLabel.text = String(format: "fm.carrierMultiplier = %0.6f", fm.carrierMultiplier)
                     leftTouchImageView.center = CGPointMake(leftTouchImageView.center.x, CGFloat(newValue) * height)
                 }
                 
                 if (object as! TouchView) == rightView {
-                    fm.modulationIndex.value = newValue * (fm.modulationIndex.maximum - fm.modulationIndex.minimum) + fm.modulationIndex.minimum
-                    modulationIndexLabel.text = String(format: "fm.cmodulationIndex = %0.6f", fm.modulationIndex.value)
+                    fm.modulationIndex = newValue * (maxModulationIndex - minModulationIndex) + minModulationIndex
+                    modulationIndexLabel.text = String(format: "fm.modulationIndex = %0.6f", fm.modulationIndex)
                     rightTouchImageView.center = CGPointMake(rightTouchImageView.center.x, CGFloat(newValue) * height)
                 }
             
