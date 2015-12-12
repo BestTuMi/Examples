@@ -12,8 +12,8 @@
 		94B956331B0A82E1005CD8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B956311B0A82E1005CD8AC /* Main.storyboard */; };
 		94B956351B0A82E1005CD8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B956341B0A82E1005CD8AC /* Images.xcassets */; };
 		94B956381B0A82E1005CD8AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B956361B0A82E1005CD8AC /* LaunchScreen.xib */; };
-		94B9566A1B0A8912005CD8AC /* blaster.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 94B956691B0A8912005CD8AC /* blaster.aiff */; };
 		94B9566C1B0A8943005CD8AC /* raygun.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B9566B1B0A8943005CD8AC /* raygun.png */; };
+		C467819F1C1C199F0000BF29 /* blaster.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C467819D1C1C199F0000BF29 /* blaster.aiff */; };
 		C4BD218C1C1410A700CC1615 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD21891C14101400CC1615 /* AudioKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		94B956321B0A82E1005CD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94B956341B0A82E1005CD8AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94B956371B0A82E1005CD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		94B956691B0A8912005CD8AC /* blaster.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = blaster.aiff; sourceTree = "<group>"; };
 		94B9566B1B0A8943005CD8AC /* raygun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raygun.png; sourceTree = "<group>"; };
+		C467819D1C1C199F0000BF29 /* blaster.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = blaster.aiff; sourceTree = "<group>"; };
 		C4BD21831C14101400CC1615 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../../../AudioKitAU/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +102,7 @@
 		94B956681B0A8900005CD8AC /* Audio Files */ = {
 			isa = PBXGroup;
 			children = (
-				94B956691B0A8912005CD8AC /* blaster.aiff */,
+				C467819D1C1C199F0000BF29 /* blaster.aiff */,
 			);
 			name = "Audio Files";
 			sourceTree = "<group>";
@@ -198,8 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B956331B0A82E1005CD8AC /* Main.storyboard in Resources */,
-				94B9566A1B0A8912005CD8AC /* blaster.aiff in Resources */,
 				94B956381B0A82E1005CD8AC /* LaunchScreen.xib in Resources */,
+				C467819F1C1C199F0000BF29 /* blaster.aiff in Resources */,
 				94B956351B0A82E1005CD8AC /* Images.xcassets in Resources */,
 				94B9566C1B0A8943005CD8AC /* raygun.png in Resources */,
 			);
