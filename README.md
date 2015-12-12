@@ -17,7 +17,7 @@ git submodule update
 Examples
 =======
 
-There are examples for iOS and OSX in both Objective-C and Swift except as noted below:
+All examples are in Swift.
 
 iOS Examples
 ------------
@@ -25,7 +25,7 @@ iOS Examples
 * Continuous Control
 * Convolution
 * Effects Processor Demo
-* FM Oscillator (Swift only)
+* FM Oscillator
 * Granular Synthesis
 * Harmonizer
 * Keyboard
@@ -35,12 +35,7 @@ iOS Examples
 * Touch Regions
 
 
-OSX Examples
-------------
-* Continuous Control (Objective-C)
-* Convolution
-* Play Audio File (Objective-C)
-* Sequences (Objective-C)
+OSX & tvOS examples to come
 
 
 User Contributions
