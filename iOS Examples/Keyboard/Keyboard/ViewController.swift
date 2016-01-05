@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func reverbSliderValueChanged(sender: UISlider) {
-        conductor.setReverbFeedbackLevel(sender.value)
+        conductor.setReverbFeedbackLevel(Double(sender.value))
     }
     @IBAction func toneColorSliderValueChanged(sender: UISlider) {
         conductor.setToneColor(sender.value)
