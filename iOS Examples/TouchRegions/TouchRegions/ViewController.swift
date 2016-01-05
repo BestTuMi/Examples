@@ -21,16 +21,16 @@ class ViewController: UIViewController {
     // Properties
     let audiokit = AKManager.sharedInstance
     let fm = AKFMOscillator(amplitude: 0.0)
-    let minFrequency: Float = 440.0
-    let maxFrequency: Float = 880.0
-    let minCarrierMultiplier: Float = 0.0
-    let maxCarrierMultiplier: Float = 2.0
-    let minModulatingMultiplier: Float = 0.0
-    let maxModulatingMultiplier: Float = 2.0
-    let minModulationIndex: Float = 0.0
-    let maxModulationIndex: Float = 30
-    let minAmplitude: Float = 0.0
-    let maxAmplitude: Float = 0.2
+    let minFrequency = 440.0
+    let maxFrequency = 880.0
+    let minCarrierMultiplier = 0.0
+    let maxCarrierMultiplier = 2.0
+    let minModulatingMultiplier = 0.0
+    let maxModulatingMultiplier = 2.0
+    let minModulationIndex = 0.0
+    let maxModulationIndex = 30.0
+    let minAmplitude = 0.0
+    let maxAmplitude = 0.2
     
     var leftTouchImageView: UIImageView!
     var rightTouchImageView: UIImageView!
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         // Add Instrument
         audiokit.audioOutput = fm
         audiokit.start()
+        fm.start()
         
         // Setup Touch Visual Indicators
         leftTouchImageView = UIImageView(frame: CGRectMake(-350, -350, 50, 50))
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
             let height: CGFloat = self.view.frame.size.height
             
             if keyPath == "horizontalPercentage" {
-                let newValue = change![NSKeyValueChangeNewKey] as! Float
+                let newValue = change![NSKeyValueChangeNewKey] as! Double
                 
                 if (object as! TouchView) == leftView {
                     fm.amplitude = maxAmplitude
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
                 }
                 
             } else if keyPath == "verticalPercentage" {
-                let newValue = change![NSKeyValueChangeNewKey] as! Float
+                let newValue = change![NSKeyValueChangeNewKey] as! Double
                 
                 if (object as! TouchView) == leftView {
                     fm.carrierMultiplier = newValue * (maxCarrierMultiplier - minCarrierMultiplier) + minCarrierMultiplier

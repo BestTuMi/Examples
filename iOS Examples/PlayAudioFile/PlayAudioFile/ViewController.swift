@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
     @IBAction func playButtonPressed(sender: UIButton) {
         player!.stop()
-        timePitch?.rate = randomFloat(0.2, 2.0)
+        timePitch?.rate = random(0.2, 2.0)
         player!.play()
     }
 
