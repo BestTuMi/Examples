@@ -14,8 +14,6 @@
 		C4AC6E801A91EC3C00B2F63B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AC6E7F1A91EC3C00B2F63B /* Images.xcassets */; };
 		C4AC6E831A91EC3C00B2F63B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC6E811A91EC3C00B2F63B /* LaunchScreen.xib */; };
 		C4AC6E9B1A91EC9000B2F63B /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC6E981A91EC9000B2F63B /* Conductor.swift */; };
-		C4AC6E9C1A91EC9000B2F63B /* EffectsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC6E991A91EC9000B2F63B /* EffectsProcessor.swift */; };
-		C4AC6E9D1A91EC9000B2F63B /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC6E9A1A91EC9000B2F63B /* ToneGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +43,6 @@
 		C4AC6E7F1A91EC3C00B2F63B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4AC6E821A91EC3C00B2F63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C4AC6E981A91EC9000B2F63B /* Conductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
-		C4AC6E991A91EC9000B2F63B /* EffectsProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsProcessor.swift; sourceTree = "<group>"; };
-		C4AC6E9A1A91EC9000B2F63B /* ToneGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +86,6 @@
 		C4AC6E751A91EC3C00B2F63B /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				C4AC6E9E1A91EC9E00B2F63B /* Instruments */,
 				C4AC6E981A91EC9000B2F63B /* Conductor.swift */,
 				C4AC6E7A1A91EC3C00B2F63B /* ViewController.swift */,
 				C4AC6E7C1A91EC3C00B2F63B /* Main.storyboard */,
@@ -108,15 +103,6 @@
 				C4AC6E771A91EC3C00B2F63B /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C4AC6E9E1A91EC9E00B2F63B /* Instruments */ = {
-			isa = PBXGroup;
-			children = (
-				C4AC6E991A91EC9000B2F63B /* EffectsProcessor.swift */,
-				C4AC6E9A1A91EC9000B2F63B /* ToneGenerator.swift */,
-			);
-			name = Instruments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AC6E7B1A91EC3C00B2F63B /* ViewController.swift in Sources */,
-				C4AC6E9C1A91EC9000B2F63B /* EffectsProcessor.swift in Sources */,
-				C4AC6E9D1A91EC9000B2F63B /* ToneGenerator.swift in Sources */,
 				C4AC6E9B1A91EC9000B2F63B /* Conductor.swift in Sources */,
 				C4AC6E791A91EC3C00B2F63B /* AppDelegate.swift in Sources */,
 			);

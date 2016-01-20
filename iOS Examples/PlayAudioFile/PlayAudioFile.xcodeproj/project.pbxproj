@@ -13,6 +13,7 @@
 		94B956351B0A82E1005CD8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B956341B0A82E1005CD8AC /* Images.xcassets */; };
 		94B956381B0A82E1005CD8AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B956361B0A82E1005CD8AC /* LaunchScreen.xib */; };
 		94B9566C1B0A8943005CD8AC /* raygun.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B9566B1B0A8943005CD8AC /* raygun.png */; };
+		C44ECCAB1C3F9E5C0012A153 /* AudioKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4B192F41C3B9F8600C0F330 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C467819F1C1C199F0000BF29 /* blaster.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C467819D1C1C199F0000BF29 /* blaster.aiff */; };
 		C4B192F71C3B9F8F00C0F330 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B192F41C3B9F8600C0F330 /* AudioKit.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,19 @@
 			remoteInfo = AudioKitTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C44ECCA81C3F9E510012A153 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C44ECCAB1C3F9E5C0012A153 /* AudioKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		94B956281B0A82E1005CD8AC /* PlayAudioFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAudioFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +140,7 @@
 				94B956241B0A82E1005CD8AC /* Sources */,
 				94B956251B0A82E1005CD8AC /* Frameworks */,
 				94B956261B0A82E1005CD8AC /* Resources */,
+				C44ECCA81C3F9E510012A153 /* CopyFiles */,
 			);
 			buildRules = (
 			);

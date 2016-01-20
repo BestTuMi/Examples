@@ -41,7 +41,6 @@
 		C4AC6C631A91EB3000B2F63B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4AC6C661A91EB3000B2F63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C4B193041C3BA42900C0F330 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../../../AudioKit3/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
-		C4C9488D1ACD1A1400326CA9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +85,6 @@
 		C4AC6C5A1A91EB3000B2F63B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4C9488D1ACD1A1400326CA9 /* Bridging-Header.h */,
 				C4AC6C5C1A91EB3000B2F63B /* AppDelegate.swift */,
 				C4AC6C631A91EB3000B2F63B /* Images.xcassets */,
 				C4AC6C651A91EB3000B2F63B /* LaunchScreen.xib */,

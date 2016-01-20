@@ -7,50 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94FB4F1A1B090A3600CF7DA0 /* ContinuousControlConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB4F191B090A3600CF7DA0 /* ContinuousControlConductor.swift */; };
 		94FC79EE1B09026B00DFF593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC79ED1B09026B00DFF593 /* AppDelegate.swift */; };
 		94FC79F01B09026B00DFF593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC79EF1B09026B00DFF593 /* ViewController.swift */; };
 		94FC79F31B09026B00DFF593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FC79F11B09026B00DFF593 /* Main.storyboard */; };
 		94FC79F51B09026B00DFF593 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FC79F41B09026B00DFF593 /* Images.xcassets */; };
 		94FC79F81B09026B00DFF593 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC79F61B09026B00DFF593 /* LaunchScreen.xib */; };
-		94FC7A1E1B09032B00DFF593 /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC7A1D1B09032B00DFF593 /* AudioKit.swift */; };
-		94FC7A231B0903C400DFF593 /* TweakableInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC7A221B0903C400DFF593 /* TweakableInstrument.swift */; };
-		EA8CEC6E1BA3B05100DD53F6 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8CEC671BA3B00F00DD53F6 /* libAudioKit iOS Static.a */; };
+		C40AD6B81C46597A00B638AF /* AudioKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C49351E81C3BBCA000A28D7F /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C49351EB1C3BBCAD00A28D7F /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49351E81C3BBCA000A28D7F /* AudioKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EA8CEC661BA3B00F00DD53F6 /* PBXContainerItemProxy */ = {
+		C49351E71C3BBCA000A28D7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */;
+			containerPortal = C49351E21C3BBCA000A28D7F /* AudioKit For iOS.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
-			remoteInfo = "AudioKit iOS Static";
+			remoteGlobalIDString = C42F35001C057E03000E937C;
+			remoteInfo = AudioKit;
 		};
-		EA8CEC681BA3B00F00DD53F6 /* PBXContainerItemProxy */ = {
+		C49351E91C3BBCA000A28D7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */;
+			containerPortal = C49351E21C3BBCA000A28D7F /* AudioKit For iOS.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
-			remoteInfo = "AudioKit iOS Dynamic";
-		};
-		EA8CEC6A1BA3B00F00DD53F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
-			remoteInfo = "AudioKit OS X";
-		};
-		EA8CEC6C1BA3B04800DD53F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EA8E93D71AD3C5240057E979;
-			remoteInfo = "AudioKit iOS Static";
+			remoteGlobalIDString = C43792781C0CE2E0001E9160;
+			remoteInfo = AudioKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C40AD6B51C46597200B638AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C40AD6B81C46597A00B638AF /* AudioKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		94FB4F191B090A3600CF7DA0 /* ContinuousControlConductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousControlConductor.swift; sourceTree = "<group>"; };
 		94FC79E81B09026B00DFF593 /* ContinuousControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContinuousControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC79EC1B09026B00DFF593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94FC79ED1B09026B00DFF593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,10 +54,7 @@
 		94FC79F21B09026B00DFF593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94FC79F41B09026B00DFF593 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94FC79F71B09026B00DFF593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
-		94FC7A1D1B09032B00DFF593 /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioKit.swift; path = ../../../../AudioKit/AudioKit/Platforms/Swift/AudioKit.swift; sourceTree = "<group>"; };
-		94FC7A1F1B09034B00DFF593 /* ContinuousControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContinuousControl-Bridging-Header.h"; sourceTree = "<group>"; };
-		94FC7A221B0903C400DFF593 /* TweakableInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweakableInstrument.swift; sourceTree = "<group>"; };
+		C49351E21C3BBCA000A28D7F /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../../../AudioKit3/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,25 +62,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8CEC6E1BA3B05100DD53F6 /* libAudioKit iOS Static.a in Frameworks */,
+				C49351EB1C3BBCAD00A28D7F /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94FB4F211B0921AF00CF7DA0 /* Instruments */ = {
-			isa = PBXGroup;
-			children = (
-				94FC7A221B0903C400DFF593 /* TweakableInstrument.swift */,
-			);
-			name = Instruments;
-			sourceTree = "<group>";
-		};
 		94FC79DF1B09026B00DFF593 = {
 			isa = PBXGroup;
 			children = (
-				94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */,
+				C49351E21C3BBCA000A28D7F /* AudioKit For iOS.xcodeproj */,
 				94FC79EA1B09026B00DFF593 /* ContinuousControl */,
 				94FC79E91B09026B00DFF593 /* Products */,
 			);
@@ -104,9 +89,7 @@
 		94FC79EA1B09026B00DFF593 /* ContinuousControl */ = {
 			isa = PBXGroup;
 			children = (
-				94FB4F211B0921AF00CF7DA0 /* Instruments */,
 				94FC79ED1B09026B00DFF593 /* AppDelegate.swift */,
-				94FB4F191B090A3600CF7DA0 /* ContinuousControlConductor.swift */,
 				94FC79EF1B09026B00DFF593 /* ViewController.swift */,
 				94FC79F11B09026B00DFF593 /* Main.storyboard */,
 				94FC79F41B09026B00DFF593 /* Images.xcassets */,
@@ -119,19 +102,16 @@
 		94FC79EB1B09026B00DFF593 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94FC7A1F1B09034B00DFF593 /* ContinuousControl-Bridging-Header.h */,
-				94FC7A1D1B09032B00DFF593 /* AudioKit.swift */,
 				94FC79EC1B09026B00DFF593 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA8CEC611BA3B00F00DD53F6 /* Products */ = {
+		C49351E31C3BBCA000A28D7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA8CEC671BA3B00F00DD53F6 /* libAudioKit iOS Static.a */,
-				EA8CEC691BA3B00F00DD53F6 /* libAudioKit iOS Dynamic.a */,
-				EA8CEC6B1BA3B00F00DD53F6 /* libAudioKit OS X.a */,
+				C49351E81C3BBCA000A28D7F /* AudioKit.framework */,
+				C49351EA1C3BBCA000A28D7F /* AudioKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,11 +126,11 @@
 				94FC79E41B09026B00DFF593 /* Sources */,
 				94FC79E51B09026B00DFF593 /* Frameworks */,
 				94FC79E61B09026B00DFF593 /* Resources */,
+				C40AD6B51C46597200B638AF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EA8CEC6D1BA3B04800DD53F6 /* PBXTargetDependency */,
 			);
 			name = ContinuousControl;
 			productName = ContinuousControl;
@@ -185,8 +165,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EA8CEC611BA3B00F00DD53F6 /* Products */;
-					ProjectRef = 94FC7A0D1B09029400DFF593 /* AudioKit.xcodeproj */;
+					ProductGroup = C49351E31C3BBCA000A28D7F /* Products */;
+					ProjectRef = C49351E21C3BBCA000A28D7F /* AudioKit For iOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -197,25 +177,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA8CEC671BA3B00F00DD53F6 /* libAudioKit iOS Static.a */ = {
+		C49351E81C3BBCA000A28D7F /* AudioKit.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libAudioKit iOS Static.a";
-			remoteRef = EA8CEC661BA3B00F00DD53F6 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = AudioKit.framework;
+			remoteRef = C49351E71C3BBCA000A28D7F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA8CEC691BA3B00F00DD53F6 /* libAudioKit iOS Dynamic.a */ = {
+		C49351EA1C3BBCA000A28D7F /* AudioKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libAudioKit iOS Dynamic.a";
-			remoteRef = EA8CEC681BA3B00F00DD53F6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EA8CEC6B1BA3B00F00DD53F6 /* libAudioKit OS X.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libAudioKit OS X.a";
-			remoteRef = EA8CEC6A1BA3B00F00DD53F6 /* PBXContainerItemProxy */;
+			fileType = wrapper.cfbundle;
+			path = AudioKitTests.xctest;
+			remoteRef = C49351E91C3BBCA000A28D7F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -238,23 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94FC7A1E1B09032B00DFF593 /* AudioKit.swift in Sources */,
-				94FB4F1A1B090A3600CF7DA0 /* ContinuousControlConductor.swift in Sources */,
-				94FC7A231B0903C400DFF593 /* TweakableInstrument.swift in Sources */,
 				94FC79F01B09026B00DFF593 /* ViewController.swift in Sources */,
 				94FC79EE1B09026B00DFF593 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EA8CEC6D1BA3B04800DD53F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AudioKit iOS Static";
-			targetProxy = EA8CEC6C1BA3B04800DD53F6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94FC79F11B09026B00DFF593 /* Main.storyboard */ = {
@@ -367,13 +329,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ContinuousControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ContinuousControl/ContinuousControl-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKit/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -384,12 +347,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ContinuousControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.audiokit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ContinuousControl/ContinuousControl-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "../../../AudioKit/AudioKit/**";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
