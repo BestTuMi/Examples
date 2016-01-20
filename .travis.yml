@@ -3,7 +3,7 @@ osx_image: xcode7
 env:
 - LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 
-before_install: 
+before_install:
 - gem install xcpretty -N
 - git submodule init
 - git submodule update
@@ -11,31 +11,31 @@ before_install:
 
 script:
 - if test `find . -name \*.pbxproj -exec grep -H /Users/ {} \;|tee /tmp/found|wc -l` -gt 0; then cat /tmp/found; exit 1; fi
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/BinauralAudio/BinauralAudio.xcodeproj               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/ContinuousControl/ContinuousControl.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Convolution/Convolution.xcodeproj                   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/EffectsProcessorDemo/EffectsProcessorDemo.xcodeproj -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/GranularSynthesis/GranularSynthesis.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Harmonizer/Harmonizer.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Keyboard/Keyboard.xcodeproj                         -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/PlayAudioFile/PlayAudioFile.xcodeproj               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Sequences/Sequences.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TableDemo/TableDemo.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TouchRegions/TouchRegions.xcodeproj                 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/BinauralAudio/BinauralAudio.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/ContinuousControl/ContinuousControl.xcodeproj             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Convolution/Convolution.xcodeproj                         -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/EffectsProcessorDemo/EffectsProcessorDemo.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/FMOscillator/FMOscillator.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/GranularSynthesis/GranularSynthesis.xcodeproj             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Harmonizer/Harmonizer.xcodeproj                           -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Keyboard/Keyboard.xcodeproj                               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/PlayAudioFile/PlayAudioFile.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Sequences/Sequences.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TableDemo/TableDemo.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TouchRegions/TouchRegions.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
-- set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/ContinuousControl/ContinuousControl.xcodeproj build | xcpretty -c
-- set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/Convolution/Convolution.xcodeproj             build | xcpretty -c
-- set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/PlayAudioFile/PlayAudioFile.xcodeproj         build | xcpretty -c
-- set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/Sequences/Sequences.xcodeproj                 build | xcpretty -c
-- set -o pipefail && xcodebuild -project OSX\ Examples/Swift/Convolution/Convolution.xcodeproj                   build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/BinauralAudio/BinauralAudio.xcodeproj               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/ContinuousControl/ContinuousControl.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Convolution/Convolution.xcodeproj                   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/EffectsProcessorDemo/EffectsProcessorDemo.xcodeproj -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/GranularSynthesis/GranularSynthesis.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Harmonizer/Harmonizer.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Keyboard/Keyboard.xcodeproj                         -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/PlayAudioFile/PlayAudioFile.xcodeproj               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/Sequences/Sequences.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TableDemo/TableDemo.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Objective-C/TouchRegions/TouchRegions.xcodeproj                 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/BinauralAudio/BinauralAudio.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/ContinuousControl/ContinuousControl.xcodeproj             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Convolution/Convolution.xcodeproj                         -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/EffectsProcessorDemo/EffectsProcessorDemo.xcodeproj       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/FMOscillator/FMOscillator.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/GranularSynthesis/GranularSynthesis.xcodeproj             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Harmonizer/Harmonizer.xcodeproj                           -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Keyboard/Keyboard.xcodeproj                               -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/PlayAudioFile/PlayAudioFile.xcodeproj                     -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/Sequences/Sequences.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TableDemo/TableDemo.xcodeproj                             -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project iOS\ Examples/Swift/TouchRegions/TouchRegions.xcodeproj                       -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+# - set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/ContinuousControl/ContinuousControl.xcodeproj build | xcpretty -c
+# - set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/Convolution/Convolution.xcodeproj             build | xcpretty -c
+# - set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/PlayAudioFile/PlayAudioFile.xcodeproj         build | xcpretty -c
+# - set -o pipefail && xcodebuild -project OSX\ Examples/Objective-C/Sequences/Sequences.xcodeproj                 build | xcpretty -c
+# - set -o pipefail && xcodebuild -project OSX\ Examples/Swift/Convolution/Convolution.xcodeproj                   build | xcpretty -c
